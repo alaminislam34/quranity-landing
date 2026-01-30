@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 backdrop-blur-3xl bg-background shadow-md shadow-white/3 z-50 py-2">
-      <div className="max-w-360 mx-auto w-11/12">
+      <div className="max-w-400 mx-auto w-11/12">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="shrink-0">
             <Image

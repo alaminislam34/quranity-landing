@@ -6,7 +6,7 @@ import InfiniteGrid from "./Lines";
 
 function HeroSection() {
   return (
-    <div className="py-4 lg:pt-12 relative overflow-hidden pb-20 mb-24">
+    <div className="py-4 lg:pt-12 relative pb-12">
       <InfiniteGrid />
       <div className="py-6 md:py-8 relative">
         <h1 className="text-4xl md:text-5xl text-wrap xl:text-8xl font-extrabold font-lato mx-auto text-center max-w-7xl mb-6 leading-normal">
@@ -19,20 +19,20 @@ function HeroSection() {
         </p>
       </div>
       <div className="mt-10 lg:mt-12 mx-auto relative">
-        <div className="max-w-400 w-11/12 mx-auto absolute top-0 left-1/2 -translate-x-1/2 flex flex-row justify-between items-center">
+        <div className="w-11/12 mx-auto absolute top-0 left-1/2 -translate-x-1/2 flex flex-row justify-between items-center">
           <Image
             src={"/images/Gradients.png"}
             height={800}
             width={1227}
             alt="App Image"
-            className="mx-auto max-w-2xl z-10 relative rotate-180"
+            className="mx-auto max-w-xs md:max-w-md lg:max-w-2xl z-10 relative rotate-180"
           />
           <Image
             src={"/images/Gradients.png"}
             height={800}
             width={1227}
             alt="App Image"
-            className="mx-auto max-w-2xl z-10 relative"
+            className="mx-auto max-w-xs md:max-w-md lg:max-w-2xl z-10 relative"
           />
         </div>
         <div className="absolute max-w-80 aspect-square lg:max-w-180 mx-auto -rotate-45 max-h-80 lg:max-h-180 top-0 left-1/2 -translate-x-1/2  bg-primary/20 blur-[100px] h-full w-full"></div>
