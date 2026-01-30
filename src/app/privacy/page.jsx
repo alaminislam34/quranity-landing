@@ -123,7 +123,7 @@ const PrivacyPolicy = () => {
                 <li>Being transparent about how information is handled</li>
               </ul>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Scope of This Policy */}
             <div id="scope">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -154,7 +154,7 @@ const PrivacyPolicy = () => {
                 third-party services they interact with.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* How and Why */}
             <div id="how-why">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -177,7 +177,7 @@ const PrivacyPolicy = () => {
                 We do not use user data for targeted advertising or profiling.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Muslim AI */}
             <div id="transparency">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -210,7 +210,7 @@ const PrivacyPolicy = () => {
                 respectfully.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Legal Basis */}
             <div id="legal">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -229,7 +229,7 @@ const PrivacyPolicy = () => {
                 settings where applicable.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Rights */}
             <div id="rights">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -249,7 +249,7 @@ const PrivacyPolicy = () => {
                 Requests can be made by contacting us directly.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Changes */}
             <div id="changes">
               <h2 className="text-white text-xl font-semibold mb-6">
@@ -268,7 +268,7 @@ const PrivacyPolicy = () => {
                 Updated” date.
               </p>
             </div>
-
+            <hr className="text-gray/40" />
             {/* Contact */}
             <div id="contact" className="pt-8 border-t border-white/5">
               <h2 className="text-white text-xl font-semibold mb-6">
