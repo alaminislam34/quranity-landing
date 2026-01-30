@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
         {/* Sidebar Navigation */}
         <aside className="lg:w-1/4 h-fit md:sticky md:top-24">
           <div className="bg-[#121212] rounded-2xl p-6 border border-white/5">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">
+            <h3 className="md:text-lg font-semibold tracking-wider text-gray mb-6">
               Quick Navigation
             </h3>
             <nav className="flex flex-col gap-2">
@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left truncate text-xs py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-left truncate text-sm md:text-base py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
                       : "hover:bg-white/5 text-gray"
@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm font-medium text-white mb-3">
                 We are committed to:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Collecting only what is necessary</li>
                 <li>Using data only for meaningful purposes</li>
                 <li>Avoiding exploitation, surveillance, or misuse</li>
@@ -132,7 +132,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm font-medium text-white mb-3">
                 This Privacy Policy applies to:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>The Quranity mobile application</li>
                 <li>Our mobile application platforms</li>
                 <li>
@@ -144,12 +144,12 @@ const PrivacyPolicy = () => {
               <p className="text-sm font-medium text-white mb-3">
                 This policy does not apply to:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Third-party websites</li>
                 <li>External links</li>
                 <li>Services or platforms not controlled by Quranity</li>
               </ul>
-              <p className="text-gray text-sm leading-relaxed">
+              <p className="text-gray text-sm leading-relaxed md:text-base">
                 We encourage users to review the privacy policies of any
                 third-party services they interact with.
               </p>
@@ -164,7 +164,7 @@ const PrivacyPolicy = () => {
                 We use collected information solely for legitimate and
                 transparent purposes, including:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Delivering accurate prayer schedules</li>
                 <li>Displaying daily Qur’an verses</li>
                 <li>Enabling Muslim AI responses</li>
@@ -173,7 +173,7 @@ const PrivacyPolicy = () => {
                 <li>Responding to inquiries or support requests</li>
                 <li>Ensuring platform security</li>
               </ul>
-              <p className="text-sm text-gray leading-[1.8] mb-4">
+              <p className="text-sm md:text-base text-gray leading-[1.8] mb-4">
                 We do not use user data for targeted advertising or profiling.
               </p>
             </div>
@@ -190,7 +190,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm font-medium text-white mb-3">
                 How AI Data Is Used:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>User questions are processed to generate responses</li>
                 <li>
                   Conversations may be reviewed anonymously to improve quality
@@ -200,12 +200,12 @@ const PrivacyPolicy = () => {
               <p className="text-sm font-medium text-white mb-3">
                 Important Limitations:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>AI responses are informational, not fatwas</li>
                 <li>They should not replace qualified scholars</li>
                 <li>Users should avoid sharing sensitive personal details </li>
               </ul>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
                 Our goal is to assist reflection and learning — responsibly and
                 respectfully.
               </p>
@@ -219,12 +219,12 @@ const PrivacyPolicy = () => {
               <p className="text-sm leading-[1.8] text-white mb-3">
                 Depending on applicable laws, Quranity processes data based on:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Your consent</li>
                 <li>Legitimate interest in operating and improving services</li>
                 <li>Compliance with legal obligations</li>
               </ul>
-              <p className="text-sm leading-[1.8] text-gray mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
                 Users may withdraw consent at any time through device or app
                 settings where applicable.
               </p>
@@ -238,14 +238,14 @@ const PrivacyPolicy = () => {
               <p className="text-sm leading-[1.8] text-white mb-3">
                 Depending on your jurisdiction, you may have the right to:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Access your data</li>
                 <li>Correct inaccuracies</li>
                 <li>Request deletion</li>
                 <li>Restrict processing</li>
                 <li>Withdraw consent</li>
               </ul>
-              <p className="text-sm leading-[1.8] text-gray mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
                 Requests can be made by contacting us directly.
               </p>
             </div>
@@ -258,12 +258,12 @@ const PrivacyPolicy = () => {
               <p className="text-sm leading-[1.8] text-white mb-3">
                 We may update this policy to reflect:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>New features</li>
                 <li>Legal changes</li>
                 <li>Improved practices</li>
               </ul>
-              <p className="text-gray text-sm leading-relaxed">
+              <p className="text-gray text-sm leading-relaxed md:text-base">
                 Any updates will be clearly indicated by a revised “Last
                 Updated” date.
               </p>
@@ -277,10 +277,10 @@ const PrivacyPolicy = () => {
               <p className="text-sm text-gray mb-4">
                 For questions, concerns, or requests regarding privacy:
               </p>
-              <p className="text-sm font-bold text-white mt-2">
+              <p className="text-sm md:text-base font-bold text-white mt-2">
                 Email: support@quranity.app
               </p>
-              <p className="text-sm font-bold text-white mt-2">
+              <p className="text-sm md:text-base font-bold text-white mt-2">
                 App Name: Quranity
               </p>
             </div>
