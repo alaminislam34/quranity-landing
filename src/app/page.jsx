@@ -2,6 +2,7 @@
 
 import HeroSection from "./components/Hero/Hero";
 import Guide from "./components/Home/Guide";
+import PricingSection from "./components/Home/PricingSection";
 import SpiritualSection from "./components/Home/SpiritualSection";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <Guide />
       <SpiritualSection />
+      <PricingSection />
     </div>
   );
 }
