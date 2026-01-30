@@ -69,9 +69,9 @@ const PrivacyPolicy = () => {
         </h1>
       </header>
 
-      <main className="max-w-400 mx-auto w-11/12 pb-20 flex flex-col md:flex-row gap-8">
+      <main className="max-w-400 mx-auto w-11/12 pb-20 flex flex-col lg:flex-row gap-8">
         {/* Sidebar Navigation */}
-        <aside className="md:w-1/4 h-fit md:sticky md:top-24">
+        <aside className="lg:w-1/4 h-fit md:sticky md:top-24">
           <div className="bg-[#121212] rounded-2xl p-6 border border-white/5">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">
               Quick Navigation
@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left text-xs py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-left truncate text-xs py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
                       : "hover:bg-white/5 text-gray"
