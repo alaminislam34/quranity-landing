@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 
 const PricingSection = () => {
   return (
-    <div>
+    <div id="pricing">
       <section className="max-w-400 mx-auto w-11/12 py-12 md:py-16 xl:py-20">
         <div className="mb-12 xl:mb-16 space-y-6">
           <h1 className="text-[#F5F5F5] text-2xl md:text-4xl xl:text-[40px] font-semibold text-center">

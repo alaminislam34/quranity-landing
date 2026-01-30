@@ -22,3 +22,8 @@ body {
   color: #E7EEF2;
   font-family: 'DM Sans', sans-serif;
 }
+
+html {
+  scroll-margin-top: 100px;
+  scroll-behavior: smooth;
+}

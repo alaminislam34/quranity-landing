@@ -13,7 +13,7 @@ const ContactPage = () => {
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#D1D5DB] text-4xl md:text-6xl font-bold mb-6 tracking-tight drop-shadow-sm"
+            className="text-[#F5F5F5] text-2xl md:text-4xl xl:text-[40px] font-semibold text-center mb-12 xl:mb-16"
           >
             We&apos;re Here to Help
           </motion.h2>

@@ -89,7 +89,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0); // First one open by default as per image
 
   return (
-    <section>
+    <section id="faq">
       <div className="max-w-300 mx-auto w-11/12 py-12 md:py-16 xl:py-20">
         <h2 className="text-white text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight">
           Common Questions About Quranity

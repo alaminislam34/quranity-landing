@@ -71,7 +71,7 @@ const TermsConditions = () => {
         {/* Sidebar Navigation */}
         <aside className="md:w-1/4 h-fit md:sticky md:top-24">
           <div className="bg-[#121212] rounded-2xl p-2 border border-white/5">
-            <h3 className="text-sm md:text-base xl:text-lg font-semibold p-4 tracking-widest text-gray mb-6">
+            <h3 className="text-sm md:text-base xl:text-lg font-semibold p-4 text-gray mb-6">
               Quick Navigation
             </h3>
             <nav className="flex flex-col gap-2">
@@ -79,7 +79,7 @@ const TermsConditions = () => {
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left text-xs truncate py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-left text-sm md:text-base truncate py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
                       : "hover:bg-white/5 text-gray"
@@ -105,15 +105,15 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Introduction & Acceptance of Terms
               </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
                 Welcome to Quranity. These Terms & Conditions (“Terms”) govern
                 your access to and use of the Quranity mobile application,
                 website, and related services.
               </p>
-              <p className="text-sm font-medium text-white mb-3">
+              <p className="text-sm md:text-base font-medium text-white mb-3">
                 By downloading, accessing, or using Quranity, you confirm that:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>You have read and understood these Terms</li>
                 <li>You agree to be bound by them</li>
                 <li>
@@ -130,10 +130,10 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 About Quranity
               </h2>
-              <p className="text-sm font-medium text-white mb-3">
+              <p className="text-sm md:text-base font-medium text-white mb-3">
                 Quranity is a digital Islamic platform designed to support:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Daily prayer awareness</li>
                 <li>Qur’an reading and reflection</li>
                 <li>General Islamic guidance through Muslim AI</li>
@@ -151,17 +151,17 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Use of Islamic Content
               </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
                 All Islamic content provided through Quranity:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Is intended for educational and spiritual purposes</li>
                 <li>Should be approached with sincerity and reflection</li>
                 <li>
                   Does not replace traditional learning or qualified scholars
                 </li>
               </ul>
-              <p className="text-sm text-gray leading-[1.8] mb-4">
+              <p className="text-sm md:text-base text-gray leading-[1.8] mb-4">
                 Translations, interpretations, and explanations may vary, and
                 users are encouraged to seek additional knowledge when needed.
               </p>
@@ -172,14 +172,14 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Muslim AI – Important Disclaimer
               </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
                 Muslim AI is designed to provide general guidance and
                 reflection, not authoritative religious rulings.
               </p>
-              <p className="text-sm font-medium text-white mb-3">
+              <p className="text-sm md:text-base font-medium text-white mb-3">
                 By using Muslim AI, you acknowledge that:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>AI responses are informational only</li>
                 <li>Responses should not be considered fatwas</li>
                 <li>AI guidance does not replace qualified scholars</li>
@@ -189,7 +189,7 @@ const TermsConditions = () => {
                 </li>
               </ul>
 
-              <p className="text-sm leading-[1.8] text-gray mb-4">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
                 Users should exercise judgment and consult scholars for serious
                 religious, legal, or personal matters.
               </p>
@@ -200,26 +200,26 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 User-Generated Content
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
                 You may submit content such as:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Questions to Muslim AI</li>
                 <li>Feedback or suggestions</li>
                 <li>Support messages</li>
               </ul>
-              <p className="text-sm leading-[1.8] text-white mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
                 By submitting content, you grant Quranity a limited,
                 non-exclusive right to:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Process the content to provide services</li>
                 <li>Improve app quality (in anonymized form)</li>
               </ul>
-              <p className="text-sm leading-[1.8] text-white mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
                 You agree not to submit:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Offensive or abusive material</li>
                 <li>False or misleading information</li>
                 <li>Content that violates laws or rights of others</li>
@@ -231,14 +231,14 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Free & Premium Features
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
                 Quranity may offer:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Free features with usage limits</li>
                 <li>Premium or paid features (if enabled)</li>
               </ul>
-              <p className="text-sm leading-[1.8] text-gray mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
                 Pricing, limits, and features may change at any time. We reserve
                 the right to modify or discontinue any part of the service
                 without prior notice.
@@ -250,10 +250,10 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Payments & Subscriptions
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
+              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
                 If Quranity offers paid subscriptions:
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>
                   Payments are handled through authorized third-party platforms
                 </li>
@@ -272,16 +272,18 @@ const TermsConditions = () => {
               <h2 className="text-white text-xl font-semibold mb-6">
                 Termination of Use
               </h2>
-              <p className="text-sm text-gray mb-4">We reserve the right to:</p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-gray ml-2 mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-gray mb-4">
+                We reserve the right to:
+              </p>
+              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
                 <li>Suspend or terminate access</li>
                 <li>Restrict features</li>
                 <li>Remove content</li>
               </ul>
-              <p className="text-sm font-bold text-white mt-2">
+              <p className="text-sm md:text-base text-white mt-2">
                 If these Terms are violated or if misuse is detected.
               </p>
-              <p className="text-sm font-bold text-white mt-2">
+              <p className="text-sm md:text-base text-white mt-2">
                 Termination may occur without prior notice.
               </p>
             </div>
