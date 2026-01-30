@@ -2,6 +2,7 @@
 
 import HeroSection from "./components/Hero/Hero";
 import FAQ from "./components/Home/FAQ";
+import GetStarted from "./components/Home/GetStarted";
 import GuidanceRoot from "./components/Home/GuidanceRoot";
 import Guide from "./components/Home/Guide";
 import PricingSection from "./components/Home/PricingSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <GuidanceRoot />
       <Testimonial />
       <FAQ />
+      <GetStarted/>
     </div>
   );
 }

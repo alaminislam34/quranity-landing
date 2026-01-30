@@ -75,7 +75,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="p-6 pt-2 text-gray-400 leading-relaxed">
+            <div className="p-6 pt-2 text-gray/80 leading-relaxed">
               {answer}
             </div>
           </motion.div>
