@@ -1,6 +1,7 @@
 "use client";
 
 import HeroSection from "./components/Hero/Hero";
+import GuidanceRoot from "./components/Home/GuidanceRoot";
 import Guide from "./components/Home/Guide";
 import PricingSection from "./components/Home/PricingSection";
 import SpiritualSection from "./components/Home/SpiritualSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <Guide />
       <SpiritualSection />
       <PricingSection />
+      <GuidanceRoot />
     </div>
   );
 }
