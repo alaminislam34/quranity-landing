@@ -137,15 +137,15 @@ export default function Navbar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-0 z-60 lg:hidden transition-all duration-300 ${menuOpen ? "visible opacity-100" : "invisible opacity-0"}`}
+        className={`fixed h-screen inset-0 z-60 lg:hidden transition-all overflow-hidden duration-300 ${menuOpen ? "visible opacity-100" : "invisible opacity-0"}`}
       >
         <div
-          className="absolute inset-0 bg-black backdrop-blur-sm"
+          className="absolute inset-0 bg-black/70 backdrop-blur-sm"
           onClick={() => setMenuOpen(false)}
         />
         <div
           ref={sidebarRef}
-          className={`absolute right-0 top-0 z-50 h-full w-72 bg-black backdrop-blur-3xl p-8 border-l border-white/5 transition-transform duration-300 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+          className={`absolute right-0 top-0 z-50 h-full w-72 bg-black backdrop-blur-3xl p-8 border-l border-gray/50 transition-transform duration-300 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex justify-between items-center mb-10">
             <span className="text-white font-bold text-xl">Menu</span>
@@ -167,7 +167,19 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-6 border-t border-white/5">
+            <div className="pt-6 space-y-4 border-t border-white/5">
+              <div className="flex items-center bg-[#141414] border border-white/10 rounded-lg px-4 py-2 group focus-within:border-white/20 transition-all">
+                <Mail
+                  size={18}
+                  className="text-gray-400 group-focus-within:text-white"
+                />
+                <input
+                  className="bg-transparent border-none text-[14px] text-white placeholder:text-gray-500 ml-3 focus:ring-0 w-48 outline-none"
+                  placeholder="Enter your mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
               <button className="w-full bg-[#c28e2e] text-white py-3 rounded-lg font-bold">
                 Get App
               </button>
