@@ -140,12 +140,12 @@ export default function Navbar() {
         className={`fixed inset-0 z-60 lg:hidden transition-all duration-300 ${menuOpen ? "visible opacity-100" : "invisible opacity-0"}`}
       >
         <div
-          className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+          className="absolute inset-0 bg-black backdrop-blur-sm"
           onClick={() => setMenuOpen(false)}
         />
         <div
           ref={sidebarRef}
-          className={`absolute right-0 top-0 h-full w-72 bg-[#111] p-8 border-l border-white/5 transition-transform duration-300 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+          className={`absolute right-0 top-0 z-50 h-full w-72 bg-black backdrop-blur-3xl p-8 border-l border-white/5 transition-transform duration-300 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex justify-between items-center mb-10">
             <span className="text-white font-bold text-xl">Menu</span>
