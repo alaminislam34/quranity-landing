@@ -102,8 +102,8 @@ const TestimonialCard = ({ testimonial, index }) => (
 
 const Testimonial = () => {
   return (
-    <section className="py-20 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 md:py-16 xl:py-20">
+      <div className="max-w-400 mx-auto w-11/12">
         <h1 className="text-[#F5F5F5] text-2xl md:text-4xl xl:text-[40px] font-semibold text-center mb-12 xl:mb-16 max-w-3xl mx-auto">
           What our user say?
         </h1>
