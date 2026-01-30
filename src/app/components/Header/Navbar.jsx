@@ -52,10 +52,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 py-2">
+    <nav className="sticky top-0 backdrop-blur-3xl bg-background shadow-md shadow-white/3 z-50 py-2">
       <div className="max-w-360 mx-auto w-11/12">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
               src="/logos/quranity.jpg"
@@ -66,7 +65,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Center Navigation */}
           <ul className="hidden lg:flex items-center gap-10">
             {links.map((link) => (
               <li key={link.href}>
@@ -84,9 +82,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Right Section */}
           <div className="flex items-center gap-4">
-            {/* Input & Button Group */}
             <div className="hidden xl:flex items-center gap-3">
               <div className="flex items-center bg-[#141414] border border-white/10 rounded-lg px-4 py-2 group focus-within:border-white/20 transition-all">
                 <Mail
@@ -112,7 +108,6 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* User Dropdown or Login */}
             {user ? (
               <div className="relative" ref={dropdownRef}>
                 <button
@@ -127,7 +122,6 @@ export default function Navbar() {
                     alt="User"
                   />
                 </button>
-                {/* Dropdown Menu (Simplified version of your previous one) */}
               </div>
             ) : (
               <button
