@@ -66,7 +66,7 @@ const Footer = () => {
         ))}
 
         {/* App Store Buttons */}
-        <div className="flex flex-col gap-4 items-start md:items-end">
+        {/* <div className="flex flex-col gap-4 items-start md:items-end">
           <motion.button whileHover={{ scale: 1.02 }}>
             <Image
               src="/logos/playstore.png"
@@ -86,7 +86,7 @@ const Footer = () => {
               className="max-w-50 h-full w-full object-contain"
             />
           </motion.button>
-        </div>
+        </div> */}
       </div>
 
       {/* Divider */}

@@ -82,7 +82,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <div className="hidden xl:flex items-center gap-3">
               <div className="flex items-center bg-[#141414] border border-white/10 rounded-lg px-4 py-2 group focus-within:border-white/20 transition-all">
                 <Mail
@@ -131,7 +131,7 @@ export default function Navbar() {
                 <Menu size={28} />
               </button>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -15,11 +15,11 @@ export default function Home() {
       <HeroSection />
       <Guide />
       <SpiritualSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <GuidanceRoot />
       <Testimonial />
       <FAQ />
-      <GetStarted/>
+      {/* <GetStarted/> */}
     </div>
   );
 }
