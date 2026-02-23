@@ -4,12 +4,24 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Facebook, Instagram, Twitter } from "lucide-react";
-import { FaTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 
-// Replace this with your actual logo path
+const icons = [
+  {
+    Icon: FaFacebook,
+    href: "https://www.facebook.com/share/18R73SgF3x/?mibextid=wwXIfr",
+  },
+  {
+    Icon: AiFillInstagram,
+    href: "https://www.instagram.com/quranityapp?igsh=bzV0dnBsbWE4cmF4&utm_source=qr",
+  },
+  {
+    Icon: FaYoutube,
+    href: "https://www.youtube.com/@quranityapp?si=JCL7xoUGtl3xJGF4",
+  },
+];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,9 +46,18 @@ const Footer = () => {
     {
       title: "Social",
       links: [
-        { name: "Facebook", href: "https://facebook.com" },
-        { name: "Instagram", href: "https://instagram.com" },
-        { name: "Twitter", href: "https://twitter.com" },
+        {
+          name: "Facebook",
+          href: "https://www.facebook.com/share/18R73SgF3x/?mibextid=wwXIfr",
+        },
+        {
+          name: "Instagram",
+          href: "https://www.instagram.com/quranityapp?igsh=bzV0dnBsbWE4cmF4&utm_source=qr",
+        },
+        {
+          name: "Youtube",
+          href: "https://www.youtube.com/@quranityapp?si=JCL7xoUGtl3xJGF4",
+        },
       ],
     },
   ];
@@ -64,29 +85,6 @@ const Footer = () => {
             </ul>
           </div>
         ))}
-
-        {/* App Store Buttons */}
-        {/* <div className="flex flex-col gap-4 items-start md:items-end">
-          <motion.button whileHover={{ scale: 1.02 }}>
-            <Image
-              src="/logos/playstore.png"
-              alt="Play Store"
-              width={400}
-              height={400}
-              className="max-w-50 h-full w-full object-contain"
-            />
-          </motion.button>
-
-          <motion.button whileHover={{ scale: 1.02 }}>
-            <Image
-              src="/logos/applestore.png"
-              alt="Apple Store"
-              width={400}
-              height={400}
-              className="max-w-50 h-full w-full object-contain"
-            />
-          </motion.button>
-        </div> */}
       </div>
 
       {/* Divider */}
@@ -94,7 +92,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="max-w-400 mx-auto w-11/12 flex flex-col md:flex-row justify-between items-center gap-8">
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="shrink-0 flex items-center gap-2 flex-row">
           <Image
             src="/logos/quranity.jpg"
             height={200}
@@ -102,6 +100,7 @@ const Footer = () => {
             alt="Logo"
             className="rounded-xl max-w-15 shadow-lg shadow-black/50"
           />
+          <p className="text-white font-medium text-lg">Quranity</p>
         </Link>
 
         {/* Copyright */}
@@ -111,14 +110,14 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="flex gap-4">
-          {[FaFacebook, AiFillInstagram, FaTwitter].map((Icon, i) => (
+          {icons.map((icon, i) => (
             <motion.a
               key={i}
-              href="#"
+              href={icon.href}
               whileHover={{ y: -3, backgroundColor: "#262626" }}
               className="p-3 border border-gray-800 rounded-full transition-colors"
             >
-              <Icon className="text-white text-2xl" />
+              <icon.Icon className="text-white text-2xl" />
             </motion.a>
           ))}
         </div>

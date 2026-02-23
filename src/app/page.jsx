@@ -17,7 +17,7 @@ export default function Home() {
       <SpiritualSection />
       {/* <PricingSection /> */}
       <GuidanceRoot />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <FAQ />
       {/* <GetStarted/> */}
     </div>
