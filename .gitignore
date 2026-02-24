@@ -42,3 +42,5 @@ next-env.d.ts
 
 .vercel
 AWS.text
+.dockerignore
+Quranity.pem
