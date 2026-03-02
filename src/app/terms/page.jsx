@@ -5,23 +5,30 @@ import { motion } from "motion/react";
 import Link from "next/link";
 
 const sections = [
-  { id: "intro", title: "Introduction & Acceptance of Terms" },
-  { id: "about", title: "About Quranity" },
-  { id: "content", title: "Use of Islamic Content" },
-  { id: "muslim_ai", title: "Muslim AI – Important Disclaimer" },
-  { id: "user_generated", title: "User-Generated Content" },
-  { id: "features", title: "Free & Premium Features" },
-  { id: "payments", title: "Payments & Subscriptions" },
-  { id: "termination", title: "Termination of Use" },
+  { id: "intro", title: "ACCEPTANCE OF TERMS" },
+  { id: "about", title: "DESCRIPTION OF SERVICES" },
+  { id: "content", title: "ACCOUNTS & SUBSCRIPTIONS" },
+  { id: "muslim_ai", title: "USER RESPONSIBILITIES" },
+  { id: "user_generated", title: "INTELLECTUAL PROPERTY" },
+  { id: "features", title: "DISCLAIMER OF WARRANTIES" },
+  { id: "payments", title: "LIMITATION OF LIABILITY" },
+  { id: "indemnification", title: "INDEMNIFICATION" },
+  { id: "arbitration", title: "ARBITRATION & DISPUTE RESOLUTION" },
+  { id: "force-majeure", title: "FORCE MAJEURE" },
+  { id: "termination", title: "TERMINATION" },
+  { id: "contact", title: "CONTACT" },
 ];
 
 const TermsConditions = () => {
-  const [activeSection, setActiveSection] = useState("commitment");
+  // Fix 1: Initialized state with the first valid ID from the sections array
+  const [activeSection, setActiveSection] = useState("intro");
 
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -70% 0px",
+      // Adjusting margin to ensure the section is considered active
+      // when it's roughly in the top-middle of the viewport
+      rootMargin: "-10% 0px -80% 0px",
       threshold: 0,
     };
 
@@ -37,6 +44,7 @@ const TermsConditions = () => {
       observerCallback,
       observerOptions,
     );
+
     sections.forEach((section) => {
       const element = document.getElementById(section.id);
       if (element) observer.observe(element);
@@ -46,43 +54,60 @@ const TermsConditions = () => {
   }, []);
 
   return (
-    <div className="selection:bg-[#B37C00]/30">
-      {/* Global CSS for Smooth Scrolling */}
+    <div className="selection:bg-[#B37C00]/30 text-gray-300">
       <style jsx global>{`
         html {
           scroll-behavior: smooth;
         }
         [id] {
-          scroll-margin-top: 100px;
+          scroll-margin-top: 120px;
         }
       `}</style>
 
-      {/* Header Section */}
-      <header className="py-12 md:py-16 xl:py-20 flex flex-col items-center justify-center text-center gap-2">
-        <div className="h-14 w-14 border-6 border-primary rounded-lg rotate-45 mb-6 p-2">
-          <div className="w-full h-full bg-primary"></div>
+      <header className="py-16 md:py-24 flex flex-col items-center justify-center text-center gap-4 px-6">
+        {/* Icon Container */}
+        <div className="h-14 w-14 border-4 border-[#B37C00] rounded-lg rotate-45 mb-6 p-2 flex items-center justify-center">
+          <div className="w-full h-full bg-[#B37C00]"></div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-          Terms & Conditions
+
+        {/* Brand Label */}
+        <div className="flex items-center gap-3 opacity-60">
+          <span className="h-px w-8 bg-gray-500"></span>
+          <span className="text-gray-400 uppercase tracking-[0.3em] text-xs font-bold">
+            Quranity LLC
+          </span>
+          <span className="h-px w-8 bg-gray-500"></span>
+        </div>
+
+        {/* Main Title */}
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          TERMS & CONDITIONS
         </h1>
+
+        {/* Effective Date Badge */}
+        <div className="mt-6 px-4 py-1.5 border border-white/10 rounded-full bg-white/5">
+          <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-medium">
+            Effective Date: February 25, 2026
+          </p>
+        </div>
       </header>
 
-      <main className="max-w-400 mx-auto w-11/12 pb-20 flex flex-col md:flex-row gap-8">
+      <main className="max-w-7xl mx-auto w-11/12 pb-20 flex flex-col md:flex-row gap-8">
         {/* Sidebar Navigation */}
         <aside className="md:w-1/4 h-fit md:sticky md:top-24">
           <div className="bg-[#121212] rounded-2xl p-2 border border-white/5">
-            <h3 className="text-sm md:text-base xl:text-lg font-semibold p-4 text-gray mb-6">
+            <h3 className="text-sm font-semibold p-4 text-white mb-2">
               Quick Navigation
             </h3>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-1">
               {sections.map((section) => (
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left text-sm md:text-base truncate py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-left text-xs lg:text-sm truncate py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
-                      : "hover:bg-white/5 text-gray"
+                      : "hover:bg-white/5 text-gray-400"
                   }`}
                 >
                   {section.title}
@@ -92,200 +117,194 @@ const TermsConditions = () => {
           </div>
         </aside>
 
-        {/* Content Area */}
-        <section className="md:w-3/4 bg-[#121212] rounded-2xl p-6 md:p-8 border border-white/5 shadow-2xl">
+        {/* Content Section */}
+        <section className="md:w-3/4 bg-[#121212] rounded-2xl p-6 md:p-10 border border-white/5 shadow-2xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-12"
           >
-            {/* Introduction & Acceptance of Terms */}
-            <div id="intro">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Introduction & Acceptance of Terms
+            {/* Acceptance of Terms */}
+            <div id="intro" className="scroll-mt-32">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                1. Acceptance of Terms
               </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
-                Welcome to Quranity. These Terms & Conditions (“Terms”) govern
-                your access to and use of the Quranity mobile application,
-                website, and related services.
-              </p>
-              <p className="text-sm md:text-base font-medium text-white mb-3">
-                By downloading, accessing, or using Quranity, you confirm that:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>You have read and understood these Terms</li>
-                <li>You agree to be bound by them</li>
-                <li>
-                  You will comply with all applicable laws and regulations
-                </li>
-              </ul>
-              <p className="text-gray text-sm leading-relaxed">
-                If you do not agree with these Terms, please do not use the app.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                By accessing or using the Quranity mobile application, website,
+                AI systems, Shorts, Stories, Qur’an tools, and related services
+                (the “Services”), you agree to be bound by these Terms &
+                Conditions. If you do not agree, please do not use the Services.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* About Quranity */}
+
+            <hr className="border-white/5" />
+
+            {/* Description of Services */}
             <div id="about">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                About Quranity
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                2. Description of Services
               </h2>
-              <p className="text-sm md:text-base font-medium text-white mb-3">
-                Quranity is a digital Islamic platform designed to support:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Daily prayer awareness</li>
-                <li>Qur’an reading and reflection</li>
-                <li>General Islamic guidance through Muslim AI</li>
-                <li>Spiritual learning and personal growth</li>
-              </ul>
-
-              <p className="text-gray text-sm leading-relaxed">
-                Quranity is not a religious authority and does not issue fatwas
-                or legally binding rulings.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                Quranity provides Islamic educational content, media features,
+                prayer tools, and AI-generated informational responses. AI
+                outputs are for informational purposes only and do not
+                constitute religious rulings (fatwa), legal advice, or medical
+                advice.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Use of Islamic Content */}
+
+            <hr className="border-white/5" />
+
+            {/* Accounts & Subscriptions */}
             <div id="content">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Use of Islamic Content
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                3. Accounts & Subscriptions
               </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
-                All Islamic content provided through Quranity:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Is intended for educational and spiritual purposes</li>
-                <li>Should be approached with sincerity and reflection</li>
-                <li>
-                  Does not replace traditional learning or qualified scholars
-                </li>
-              </ul>
-              <p className="text-sm md:text-base text-gray leading-[1.8] mb-4">
-                Translations, interpretations, and explanations may vary, and
-                users are encouraged to seek additional knowledge when needed.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                Subscriptions are processed via Apple App Store or Google Play.
+                Billing, refunds, and cancellations are governed by the
+                respective platform’s policies. You are responsible for
+                maintaining the confidentiality of your account credentials.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Muslim AI – Important Disclaimer */}
-            <div id="muslim_ai">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Muslim AI – Important Disclaimer
-              </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
-                Muslim AI is designed to provide general guidance and
-                reflection, not authoritative religious rulings.
-              </p>
-              <p className="text-sm md:text-base font-medium text-white mb-3">
-                By using Muslim AI, you acknowledge that:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>AI responses are informational only</li>
-                <li>Responses should not be considered fatwas</li>
-                <li>AI guidance does not replace qualified scholars</li>
-                <li>
-                  Quranity is not responsible for decisions made solely based on
-                  AI responses
-                </li>
-              </ul>
 
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
-                Users should exercise judgment and consult scholars for serious
-                religious, legal, or personal matters.
+            <hr className="border-white/5" />
+
+            {/* User Responsibilities */}
+            <div id="muslim_ai">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                4. User Responsibilities
+              </h2>
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                You agree not to misuse the Services, interfere with platform
+                functionality, or attempt unauthorized access. Any use of the AI
+                to generate harmful or prohibited content is strictly forbidden.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* User-Generated Content */}
+
+            <hr className="border-white/5" />
+
+            {/* Intellectual Property */}
             <div id="user_generated">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                User-Generated Content
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                5. Intellectual Property
               </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
-                You may submit content such as:
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                All content, trademarks, branding, and technology within
+                Quranity are owned by QURANITY LLC or its licensors. You may not
+                reproduce or distribute any part of the service without explicit
+                permission.
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Questions to Muslim AI</li>
-                <li>Feedback or suggestions</li>
-                <li>Support messages</li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
-                By submitting content, you grant Quranity a limited,
-                non-exclusive right to:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Process the content to provide services</li>
-                <li>Improve app quality (in anonymized form)</li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
-                You agree not to submit:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Offensive or abusive material</li>
-                <li>False or misleading information</li>
-                <li>Content that violates laws or rights of others</li>
-              </ul>
             </div>
-            <hr className="text-gray/40" />
-            {/* Free & Premium Features */}
+
+            <hr className="border-white/5" />
+
+            {/* Disclaimer of Warranties */}
             <div id="features">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Free & Premium Features
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                6. Disclaimer of Warranties
               </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
-                Quranity may offer:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Free features with usage limits</li>
-                <li>Premium or paid features (if enabled)</li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
-                Pricing, limits, and features may change at any time. We reserve
-                the right to modify or discontinue any part of the service
-                without prior notice.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400 italic">
+                The Services are provided “AS IS” and “AS AVAILABLE” without
+                warranties of any kind, express or implied, including but not
+                limited to the accuracy of AI-generated content.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Payments & Subscriptions */}
+
+            <hr className="border-white/5" />
+
+            {/* Limitation of Liability */}
             <div id="payments">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Payments & Subscriptions
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                7. Limitation of Liability
               </h2>
-              <p className="text-sm md:text-base leading-[1.8] text-white mb-3">
-                If Quranity offers paid subscriptions:
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                To the maximum extent permitted by law, Quranity’s total
+                aggregate liability arising out of or relating to the Services
+                shall not exceed the total amount paid by you to Quranity in the
+                twelve (12) months preceding the claim.
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>
-                  Payments are handled through authorized third-party platforms
-                </li>
-                <li>
-                  Subscription fees are non-refundable unless required by law
-                </li>
-                <li>
-                  You are responsible for managing your subscription through
-                  your app store account
-                </li>
-              </ul>
             </div>
-            <hr className="text-gray/40" />
-            {/* Termination of Use */}
-            <div id="termination" className="pt-8 border-t border-white/5">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Termination of Use
+
+            <hr className="border-white/5" />
+
+            {/* Indemnification */}
+            <div id="indemnification">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                8. Indemnification
               </h2>
-              <p className="text-sm md:text-base text-gray mb-4">
-                We reserve the right to:
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                You agree to indemnify and hold harmless QURANITY LLC from
+                claims, damages, and expenses arising out of your misuse of the
+                Services or violation of these Terms.
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Suspend or terminate access</li>
-                <li>Restrict features</li>
-                <li>Remove content</li>
-              </ul>
-              <p className="text-sm md:text-base text-white mt-2">
-                If these Terms are violated or if misuse is detected.
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* Arbitration */}
+            <div id="arbitration">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                9. Arbitration & Dispute Resolution
+              </h2>
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                Any dispute arising out of or relating to these Terms shall be
+                resolved through binding arbitration conducted on an individual
+                basis. Class actions are not permitted. Governing Law: State of
+                Wyoming, United States.
               </p>
-              <p className="text-sm md:text-base text-white mt-2">
-                Termination may occur without prior notice.
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* Force Majeure */}
+            <div id="force-majeure">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                10. Force Majeure
+              </h2>
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                Quranity shall not be liable for delays or failures resulting
+                from causes beyond reasonable control, including natural
+                disasters, strikes, or internet service provider failures.
               </p>
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* Termination */}
+            <div id="termination">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                11. Termination
+              </h2>
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                We may suspend or terminate access to the Services immediately,
+                without prior notice, for conduct that we believe violates these
+                Terms or is harmful to other users.
+              </p>
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* Contact */}
+            <div id="contact">
+              <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
+                12. Contact
+              </h2>
+              <div className="text-sm md:text-base text-gray-400 space-y-1 bg-white/5 p-6 rounded-xl border border-white/5">
+                <p className="font-bold text-white">QURANITY LLC</p>
+                <p>30 N Gould St #58868</p>
+                <p>Sheridan, Wyoming 82801, USA</p>
+                <p className="pt-2">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@quranity.app"
+                    className="text-[#B37C00] hover:underline"
+                  >
+                    support@quranity.app
+                  </a>
+                </p>
+              </div>
             </div>
           </motion.div>
         </section>

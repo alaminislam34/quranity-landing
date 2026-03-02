@@ -40,6 +40,7 @@ const Footer = () => {
       links: [
         { name: "FAQ", href: "#faq" },
         { name: "Facebook Deletion Page", href: "facebook-terms" },
+        { name: "Cookie Policy", href: "/cookies" },
       ],
     },
     {

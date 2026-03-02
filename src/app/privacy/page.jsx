@@ -6,24 +6,27 @@ import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 const sections = [
-  { id: "commitment", title: "Our Commitment to Privacy" },
-  { id: "scope", title: "Scope of This Policy" },
-  { id: "how-why", title: "How and Why We Use Your Information" },
-  { id: "transparency", title: "Muslim AI - Transparency & Responsibility" },
-  { id: "legal", title: "Legal Basis for Processing Data" },
-  { id: "rights", title: "Your Privacy Rights" },
-  { id: "changes", title: "Changes to This Privacy Policy" },
-  { id: "contact", title: "Contact Information" },
+  { id: "intro", title: "INTRODUCTION" },
+  { id: "collection", title: "INFORMATION WE COLLECT" },
+  { id: "usage", title: "HOW WE USE INFORMATION" },
+  { id: "ai-transparency", title: "ARTIFICIAL INTELLIGENCE" },
+  { id: "advertising", title: "ADVERTISING & ANALYTICS" },
+  { id: "data-transfers", title: "INTERNATIONAL TRANSFERS" },
+  { id: "retention", title: "DATA RETENTION" },
+  { id: "rights", title: "YOUR RIGHTS" },
+  { id: "meta-deletion", title: "USER DATA DELETION" },
+  { id: "security", title: "SECURITY" },
+  { id: "children", title: "CHILDREN'S PRIVACY" },
+  { id: "contact", title: "CONTACT INFORMATION" },
 ];
 
 const PrivacyPolicy = () => {
-  const [activeSection, setActiveSection] = useState("commitment");
+  const [activeSection, setActiveSection] = useState("intro");
 
-  // Logic for smooth scroll highlighting
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -70% 0px",
+      rootMargin: "-10% 0px -80% 0px",
       threshold: 0,
     };
 
@@ -39,6 +42,7 @@ const PrivacyPolicy = () => {
       observerCallback,
       observerOptions,
     );
+
     sections.forEach((section) => {
       const element = document.getElementById(section.id);
       if (element) observer.observe(element);
@@ -48,43 +52,57 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <div className="selection:bg-[#B37C00]/30">
-      {/* Global CSS for Smooth Scrolling */}
+    <div className="selection:bg-[#B37C00]/30 text-gray-300">
       <style jsx global>{`
         html {
           scroll-behavior: smooth;
         }
         [id] {
-          scroll-margin-top: 100px;
+          scroll-margin-top: 120px;
         }
       `}</style>
 
       {/* Header Section */}
-      <header className="py-12 md:py-16 xl:py-20 flex flex-col items-center justify-center text-center gap-2">
-        <div className="bg-[#B37C00] p-2 rounded-lg mb-2">
-          <ShieldCheck className="text-black w-8 h-8" />
+      <header className="py-16 md:py-24 flex flex-col items-center justify-center text-center gap-4 px-6">
+        <div className="h-14 w-14 bg-[#B37C00] rounded-lg rotate-45 mb-6 flex items-center justify-center shadow-[0_0_20px_rgba(179,124,0,0.3)]">
+          <ShieldCheck className="-rotate-45 text-black w-8 h-8" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+
+        <div className="flex items-center gap-3 opacity-60">
+          <span className="h-px w-8 bg-gray-500"></span>
+          <span className="text-gray-400 uppercase tracking-[0.3em] text-xs font-bold">
+            Quranity LLC
+          </span>
+          <span className="h-px w-8 bg-gray-500"></span>
+        </div>
+
+        <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight uppercase">
           Privacy Policy
         </h1>
+
+        <div className="mt-6 px-4 py-1.5 border border-white/10 rounded-full bg-white/5">
+          <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-medium">
+            Effective Date: February 25, 2026
+          </p>
+        </div>
       </header>
 
-      <main className="max-w-400 mx-auto w-11/12 pb-20 flex flex-col lg:flex-row gap-8">
+      <main className="max-w-7xl mx-auto w-11/12 pb-20 flex flex-col lg:flex-row gap-8">
         {/* Sidebar Navigation */}
-        <aside className="lg:w-1/4 h-fit md:sticky md:top-24">
-          <div className="bg-[#121212] rounded-2xl p-6 border border-white/5">
-            <h3 className="md:text-lg font-semibold tracking-wider text-gray mb-6">
-              Quick Navigation
+        <aside className="lg:w-1/4 h-fit lg:sticky lg:top-24">
+          <div className="bg-[#121212] rounded-2xl p-2 border border-white/5">
+            <h3 className="text-sm font-semibold p-4 text-white mb-2">
+              Privacy Navigation
             </h3>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-1">
               {sections.map((section) => (
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left truncate text-sm md:text-base py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-left text-xs lg:text-sm truncate py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
-                      : "hover:bg-white/5 text-gray"
+                      : "hover:bg-white/5 text-gray-400"
                   }`}
                 >
                   {section.title}
@@ -95,194 +113,248 @@ const PrivacyPolicy = () => {
         </aside>
 
         {/* Content Area */}
-        <section className="md:w-3/4 bg-[#121212] rounded-2xl p-8 md:p-12 border border-white/5 shadow-2xl">
+        <section className="lg:w-3/4 bg-[#121212] rounded-2xl p-6 md:p-10 border border-white/5 shadow-2xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-12"
           >
-            {/* Our Commitment */}
-            <div id="commitment">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Our Commitment to Privacy
+            {/* 1. Introduction */}
+            <div id="intro">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                1. Introduction
               </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
-                At Quranity, protecting user privacy is a core responsibility,
-                not an afterthought. As an Islamic app designed to support
-                prayer, reflection, learning, and spiritual well-being, we
-                understand that trust is essential.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400 mb-4">
+                This Privacy Policy describes how QURANITY LLC (“Quranity,”
+                “Company,” “we,” “our,” or “us”) collects, uses, processes,
+                stores, and protects personal information when you use the
+                Quranity mobile application, website, AI features, video modules
+                (Shorts and Stories), Qur’an tools, prayer tools, and related
+                services (collectively, the “Services”).
               </p>
-              <p className="text-sm font-medium text-white mb-3">
-                We are committed to:
+              <p className="text-sm md:text-base leading-relaxed text-gray-400">
+                By using the Services, you acknowledge that you have read and
+                understood this Privacy Policy.
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Collecting only what is necessary</li>
-                <li>Using data only for meaningful purposes</li>
-                <li>Avoiding exploitation, surveillance, or misuse</li>
-                <li>Being transparent about how information is handled</li>
-              </ul>
             </div>
-            <hr className="text-gray/40" />
-            {/* Scope of This Policy */}
-            <div id="scope">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Scope of This Policy
+
+            <hr className="border-white/5" />
+
+            {/* 2. Information We Collect */}
+            <div id="collection">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                2. Information We Collect
               </h2>
-              <p className="text-sm font-medium text-white mb-3">
-                This Privacy Policy applies to:
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white/5 p-5 rounded-xl border border-white/5">
+                  <h4 className="text-white font-bold mb-2 text-sm">
+                    Account & Tech
+                  </h4>
+                  <ul className="text-xs md:text-sm text-gray-400 space-y-2">
+                    <li>
+                      • Account: Name, email, username, subscription status.
+                    </li>
+                    <li>• Device: IP address, OS, app version, diagnostics.</li>
+                  </ul>
+                </div>
+                <div className="bg-white/5 p-5 rounded-xl border border-white/5">
+                  <h4 className="text-white font-bold mb-2 text-sm">
+                    Usage & Location
+                  </h4>
+                  <ul className="text-xs md:text-sm text-gray-400 space-y-2">
+                    <li>
+                      • Usage: Interactions, Qur’an searches, bookmarks, Shorts
+                      activity.
+                    </li>
+                    <li>
+                      • Location: City-level or GPS for prayer times/Qibla.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-4 text-xs md:text-sm italic text-gray-500">
+                Note: Use of our services may inherently reveal religious
+                beliefs. This data is processed solely to provide the Services .
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>The Quranity mobile application</li>
-                <li>Our mobile application platforms</li>
-                <li>
-                  All in-app features, including Prayer Times, Qur’an Reader,
-                  Muslim AI, and notifications
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* 3. How We Use Information */}
+            <div id="usage">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                3. How We Use Information
+              </h2>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  • Provide and maintain Services.
                 </li>
-                <li>Official Quranity websites and landing pages</li>
-              </ul>
-              <p className="text-sm font-medium text-white mb-3">
-                This policy does not apply to:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Third-party websites</li>
-                <li>External links</li>
-                <li>Services or platforms not controlled by Quranity</li>
-              </ul>
-              <p className="text-gray text-sm leading-relaxed md:text-base">
-                We encourage users to review the privacy policies of any
-                third-party services they interact with.
-              </p>
-            </div>
-            <hr className="text-gray/40" />
-            {/* How and Why */}
-            <div id="how-why">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                How and Why We Use Your Information
-              </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
-                We use collected information solely for legitimate and
-                transparent purposes, including:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Delivering accurate prayer schedules</li>
-                <li>Displaying daily Qur’an verses</li>
-                <li>Enabling Muslim AI responses</li>
-                <li>Improving usability and design</li>
-                <li>Managing free and premium plan usage</li>
-                <li>Responding to inquiries or support requests</li>
-                <li>Ensuring platform security</li>
-              </ul>
-              <p className="text-sm md:text-base text-gray leading-[1.8] mb-4">
-                We do not use user data for targeted advertising or profiling.
-              </p>
-            </div>
-            <hr className="text-gray/40" />
-            {/* Muslim AI */}
-            <div id="transparency">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Muslim AI – Transparency & Responsibility
-              </h2>
-              <p className="text-sm leading-[1.8] text-gray mb-4">
-                Muslim AI is designed as a supportive guidance tool, not an
-                authoritative religious authority.
-              </p>
-              <p className="text-sm font-medium text-white mb-3">
-                How AI Data Is Used:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>User questions are processed to generate responses</li>
-                <li>
-                  Conversations may be reviewed anonymously to improve quality
+                <li className="flex items-start gap-2">
+                  • Deliver prayer times and Qibla direction.
                 </li>
-                <li>No AI conversations are sold or shared for marketing</li>
+                <li className="flex items-start gap-2">
+                  • Manage platform subscriptions.
+                </li>
+                <li className="flex items-start gap-2">
+                  • Improve platform functionality.
+                </li>
+                <li className="flex items-start gap-2">
+                  • Communicate service updates.
+                </li>
+                <li className="flex items-start gap-2">
+                  • Comply with legal obligations.
+                </li>
               </ul>
-              <p className="text-sm font-medium text-white mb-3">
-                Important Limitations:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>AI responses are informational, not fatwas</li>
-                <li>They should not replace qualified scholars</li>
-                <li>Users should avoid sharing sensitive personal details </li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-4">
-                Our goal is to assist reflection and learning — responsibly and
-                respectfully.
-              </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Legal Basis */}
-            <div id="legal">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Legal Basis for Processing Data
+
+            <hr className="border-white/5" />
+
+            {/* 4. Artificial Intelligence */}
+            <div id="ai-transparency">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                4. Artificial Intelligence
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
-                Depending on applicable laws, Quranity processes data based on:
+              <div className="bg-[#B37C00]/10 border border-[#B37C00]/20 p-6 rounded-xl">
+                <p className="text-sm md:text-base leading-relaxed text-gray-300 mb-4">
+                  AI provides automated responses generated by artificial
+                  intelligence systems. These responses may not always be
+                  accurate, complete, or authoritative.
+                </p>
+                <p className="text-xs md:text-sm font-medium text-[#B37C00] uppercase tracking-wider">
+                  AI outputs are for informational purposes only and do not
+                  constitute religious rulings (fatwa), legal advice, or medical
+                  advice.
+                </p>
+              </div>
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* 5. Advertising & Analytics */}
+            <div id="advertising">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                5. Advertising, Analytics & Meta SDK
+              </h2>
+              <p className="text-sm md:text-base leading-relaxed text-gray-400 mb-4">
+                We use tools such as Meta SDK and Meta Conversions API (CAPI).
+                Tracking technologies are activated only after user consent
+                where required by law.
               </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Your consent</li>
-                <li>Legitimate interest in operating and improving services</li>
-                <li>Compliance with legal obligations</li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
-                Users may withdraw consent at any time through device or app
-                settings where applicable.
+              <p className="text-sm font-bold text-white uppercase bg-white/5 p-4 rounded-lg inline-block border border-white/10">
+                Quranity does NOT sell Personal Information.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Rights */}
+
+            <hr className="border-white/5" />
+
+            {/* 7. Transfers & 8. Retention */}
+            <div className="grid grid-cols-1 gap-12">
+              <div id="data-transfers">
+                <h2 className="text-white text-lg font-semibold mb-4 uppercase">
+                  7. Data Transfers
+                </h2>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Information may be processed in the United States. We
+                  implement Standard Contractual Clauses (SCCs) where required.
+                </p>
+              </div>
+              <div id="retention">
+                <h2 className="text-white text-lg font-semibold mb-4 uppercase">
+                  8. Data Retention
+                </h2>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  We retain data for as long as necessary to provide Services.
+                  Users may request account deletion at any time .
+                </p>
+              </div>
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* 9. Your Rights */}
             <div id="rights">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Your Privacy Rights
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                9. Your Rights
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
-                Depending on your jurisdiction, you may have the right to:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>Access your data</li>
-                <li>Correct inaccuracies</li>
-                <li>Request deletion</li>
-                <li>Restrict processing</li>
-                <li>Withdraw consent</li>
-              </ul>
-              <p className="text-sm md:text-base leading-[1.8] text-gray mb-3">
-                Requests can be made by contacting us directly.
+              <p className="text-sm md:text-base leading-relaxed text-gray-400 mb-4">
+                You may have rights to access, correct, delete, or restrict
+                processing of your personal information. California residents
+                may exercise rights under the CCPA/CPRA.
               </p>
             </div>
-            <hr className="text-gray/40" />
-            {/* Changes */}
-            <div id="changes">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Changes to This Privacy Policy
+
+            <hr className="border-white/5" />
+
+            {/* 10. User Data Deletion (Meta Requirement) */}
+            <div id="meta-deletion">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                10. User Data Deletion (Meta Requirement)
               </h2>
-              <p className="text-sm leading-[1.8] text-white mb-3">
-                We may update this policy to reflect:
-              </p>
-              <ul className="list-disc list-inside space-y-3 text-sm md:text-base text-gray ml-2 mb-6 leading-relaxed">
-                <li>New features</li>
-                <li>Legal changes</li>
-                <li>Improved practices</li>
-              </ul>
-              <p className="text-gray text-sm leading-relaxed md:text-base">
-                Any updates will be clearly indicated by a revised “Last
-                Updated” date.
-              </p>
+              <div className="bg-red-500/5 border border-red-500/10 p-6 rounded-xl">
+                <p className="text-sm text-gray-400 mb-4">
+                  To request deletion of personal data associated with
+                  Facebook/Meta Login:
+                </p>
+                <ol className="text-sm text-gray-300 space-y-3 list-decimal list-inside">
+                  <li>Log into Quranity and select 'Delete Account'.</li>
+                  <li>
+                    Email support@quranity.app with the subject 'Facebook Data
+                    Deletion Request'.
+                  </li>
+                </ol>
+                <p className="mt-4 text-xs text-gray-500">
+                  Data will be deleted from active systems within 30 days.
+                </p>
+              </div>
             </div>
-            <hr className="text-gray/40" />
-            {/* Contact */}
-            <div id="contact" className="pt-8 border-t border-white/5">
-              <h2 className="text-white text-xl font-semibold mb-6">
-                Contact Information
+
+            <hr className="border-white/5" />
+
+            {/* 11. Security & 12. Children */}
+            <div className="grid grid-cols-1 gap-12">
+              <div id="security">
+                <h2 className="text-white text-lg font-semibold mb-4 uppercase">
+                  11. Security
+                </h2>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  We use TLS encryption and restricted access controls. No
+                  internet transmission is 100% secure.
+                </p>
+              </div>
+              <div id="children">
+                <h2 className="text-white text-lg font-semibold mb-4 uppercase">
+                  12. Children's Privacy
+                </h2>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Services are not directed to children under 13 (or 16 in
+                  certain regions). We do not knowingly collect minor
+                  information.
+                </p>
+              </div>
+            </div>
+
+            <hr className="border-white/5" />
+
+            {/* 14. Contact Information */}
+            <div id="contact">
+              <h2 className="text-white text-xl font-semibold mb-6 uppercase tracking-wide">
+                14. Contact Information
               </h2>
-              <p className="text-sm text-gray mb-4">
-                For questions, concerns, or requests regarding privacy:
-              </p>
-              <p className="text-sm md:text-base font-bold text-white mt-2">
-                Email: support@quranity.app
-              </p>
-              <p className="text-sm md:text-base font-bold text-white mt-2">
-                App Name: Quranity
-              </p>
+              <div className="text-sm md:text-base text-gray-400 space-y-1 bg-white/5 p-6 rounded-xl border border-white/5">
+                <p className="font-bold text-white uppercase">QURANITY LLC</p>
+                <p>30 N Gould St #58868 </p>
+                <p>Sheridan, Wyoming 82801, USA </p>
+                <p className="pt-2">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@quranity.app"
+                    className="text-[#B37C00] hover:underline font-medium"
+                  >
+                    support@quranity.app
+                  </a>{" "}
+                </p>
+              </div>
             </div>
           </motion.div>
         </section>
