@@ -20,6 +20,7 @@ const links = [
   { name: "Home", href: "/" },
   { name: "Privacy Policy", href: "/privacy" },
   { name: "Terms & Condition", href: "/terms" },
+  { name: "Facebook Deletion Page", href: "facebook-terms" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -133,6 +134,29 @@ export default function Navbar() {
               </button>
             )}
           </div> */}
+          {user ? (
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setShowDropdown(!showDropdown)}
+                className="flex items-center border border-white/10 p-0.5 rounded-full"
+              >
+                <Image
+                  src={user.image || "/default-avatar.png"}
+                  width={34}
+                  height={34}
+                  className="rounded-full"
+                  alt="User"
+                />
+              </button>
+            </div>
+          ) : (
+            <button
+              className="lg:hidden p-2 text-gray-400"
+              onClick={() => setMenuOpen(true)}
+            >
+              <Menu size={28} />
+            </button>
+          )}
         </div>
       </div>
 

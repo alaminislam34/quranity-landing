@@ -38,9 +38,8 @@ const Footer = () => {
     {
       title: "Information",
       links: [
-        { name: "Price", href: "#pricing" },
         { name: "FAQ", href: "#faq" },
-        { name: "Review", href: "#review" },
+        { name: "Facebook Deletion Page", href: "facebook-terms" },
       ],
     },
     {
