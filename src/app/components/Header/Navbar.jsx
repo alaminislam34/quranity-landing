@@ -84,56 +84,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* <div className="flex items-center gap-4">
-            <div className="hidden xl:flex items-center gap-3">
-              <div className="flex items-center bg-[#141414] border border-white/10 rounded-lg px-4 py-2 group focus-within:border-white/20 transition-all">
-                <Mail
-                  size={18}
-                  className="text-gray-400 group-focus-within:text-white"
-                />
-                <input
-                  className="bg-transparent border-none text-[14px] text-white placeholder:text-gray-500 ml-3 focus:ring-0 w-48 outline-none"
-                  placeholder="Enter your mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <button
-                onClick={() => toast.info("Check your email!")}
-                className="bg-linear-to-r from-primary to-primary_dark hover:from-primary_dark hover:to-[#b5852b] text-white text-[14px] font-semibold px-6 py-2.5 rounded-lg flex items-center gap-2 transition-all shadow-lg shadow-[#c28e2e]/10 active:scale-95"
-              >
-                Get Download Link
-                <div className="bg-white/20 rounded-full p-0.5">
-                  <ArrowUpRight size={14} />
-                </div>
-              </button>
-            </div>
-
-            {user ? (
-              <div className="relative" ref={dropdownRef}>
-                <button
-                  onClick={() => setShowDropdown(!showDropdown)}
-                  className="flex items-center border border-white/10 p-0.5 rounded-full"
-                >
-                  <Image
-                    src={user.image || "/default-avatar.png"}
-                    width={34}
-                    height={34}
-                    className="rounded-full"
-                    alt="User"
-                  />
-                </button>
-              </div>
-            ) : (
-              <button
-                className="lg:hidden p-2 text-gray-400"
-                onClick={() => setMenuOpen(true)}
-              >
-                <Menu size={28} />
-              </button>
-            )}
-          </div> */}
           {user ? (
             <div className="relative" ref={dropdownRef}>
               <button
