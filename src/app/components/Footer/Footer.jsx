@@ -105,7 +105,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-[#A3A3A3] text-base">
-          © {currentYear} Quranity. All rights reserved.
+          © {currentYear} Quranity LLC. All rights reserved.
         </p>
 
         {/* Social Icons */}

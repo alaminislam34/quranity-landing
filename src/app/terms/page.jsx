@@ -293,8 +293,8 @@ const TermsConditions = () => {
               </h2>
               <div className="text-sm md:text-base text-gray-400 space-y-1 bg-white/5 p-6 rounded-xl border border-white/5">
                 <p className="font-bold text-white">QURANITY LLC</p>
-                <p>30 N Gould St #58868</p>
-                <p>Sheridan, Wyoming 82801, USA</p>
+                <p>30 N Gould St Ste R</p>
+                <p>Sheridan, Wyoming 82801</p>
                 <p className="pt-2">
                   Email:{" "}
                   <a
