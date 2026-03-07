@@ -274,9 +274,9 @@ const FacebookDeletionPage = () => {
                       <p className="text-sm text-gray-500 leading-relaxed">
                         QURANITY LLC
                         <br />
-                        30 N Gould St #58868
+                        30 N Gould St Ste R
                         <br />
-                        Sheridan, Wyoming 82801, USA
+                        Sheridan, Wyoming 82801
                       </p>
                     </div>
                   </div>

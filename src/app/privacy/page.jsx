@@ -342,17 +342,17 @@ const PrivacyPolicy = () => {
                 14. Contact Information
               </h2>
               <div className="text-sm md:text-base text-gray-400 space-y-1 bg-white/5 p-6 rounded-xl border border-white/5">
-                <p className="font-bold text-white uppercase">QURANITY LLC</p>
-                <p>30 N Gould St #58868 </p>
-                <p>Sheridan, Wyoming 82801, USA </p>
+                <p className="font-bold text-white">QURANITY LLC</p>
+                <p>30 N Gould St Ste R</p>
+                <p>Sheridan, Wyoming 82801</p>
                 <p className="pt-2">
                   Email:{" "}
                   <a
                     href="mailto:support@quranity.app"
-                    className="text-[#B37C00] hover:underline font-medium"
+                    className="text-[#B37C00] hover:underline"
                   >
                     support@quranity.app
-                  </a>{" "}
+                  </a>
                 </p>
               </div>
             </div>
