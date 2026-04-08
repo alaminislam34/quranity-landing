@@ -63,7 +63,7 @@ export default function LanguageSwitcher() {
 
       {isOpen && (
         <div
-          className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 backdrop-blur-3xl"
+          className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 bg-background"
           role="listbox"
           aria-label={t("selectLanguage")}
         >
@@ -74,7 +74,7 @@ export default function LanguageSwitcher() {
               onClick={() => handleLanguageChange(loc)}
               className={`w-full text-left px-4 py-2 transition-colors ${
                 locale === loc
-                  ? "bg-gray-950 text-primary-300 font-semibold"
+                  ? "bg-gray-900 text-primary-300 font-semibold"
                   : "hover:bg-gray-900 cursor-pointer"
               } ${loc === "en" ? "rounded-t-lg" : ""} ${loc === "sq" ? "rounded-b-lg" : ""}`}
             >
