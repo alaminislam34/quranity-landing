@@ -12,17 +12,14 @@ import {
   Info,
 } from "lucide-react";
 import Link from "next/link";
-
-const sections = [
-  { id: "deletion-methods", title: "DELETION METHODS" },
-  { id: "meta-callback", title: "META CALLBACK SUPPORT" },
-  { id: "processing-time", title: "PROCESSING & RETENTION" },
-  { id: "privacy-commitment", title: "PRIVACY COMMITMENT" },
-  { id: "contact", title: "CONTACT & SUPPORT" },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 const FacebookDeletionPage = () => {
+  const t = useTranslations("facebookDeletionPolicy");
+  const sections = t.raw("sections");
+  const content = t.raw("content");
   const [activeSection, setActiveSection] = useState("deletion-methods");
+  const locale = useLocale();
 
   useEffect(() => {
     const observerOptions = {
@@ -50,7 +47,7 @@ const FacebookDeletionPage = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [sections]);
 
   return (
     <div className="selection:bg-[#B37C00]/30 text-gray-300 min-h-screen bg-black">
@@ -72,36 +69,37 @@ const FacebookDeletionPage = () => {
         <div className="flex items-center gap-3 opacity-60">
           <span className="h-px w-8 bg-gray-500"></span>
           <span className="text-gray-400 uppercase tracking-[0.3em] text-xs font-bold">
-            Quranity LLC
+            {t("company")}
           </span>
           <span className="h-px w-8 bg-gray-500"></span>
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight uppercase max-w-3xl">
-          User Data Deletion{" "}
-          <span className="text-[#B37C00]">Instructions</span>
+          {t("title")}{" "}
+          <span className="text-[#B37C00]">{t("titleHighlight")}</span>
         </h1>
 
         <div className="mt-6 px-4 py-1.5 border border-white/10 rounded-full bg-white/5">
           <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-medium">
-            Last Updated: February 25, 2026
+            {t("lastUpdated")}
           </p>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto w-11/12 pb-20 flex flex-col lg:flex-row gap-8">
-        {/* Sidebar Navigation */}
+      <main
+        className={`max-w-400 mx-auto w-11/12 pb-20 flex flex-col  ${locale === "ar" ? "lg:flex-row-reverse text-right" : "lg:flex-row"} gap-8`}
+      >
         <aside className="lg:w-1/4 h-fit lg:sticky lg:top-24">
           <div className="bg-[#121212] rounded-2xl p-2 border border-white/5">
             <h3 className="text-sm font-semibold p-4 text-white mb-2 uppercase tracking-tighter opacity-50">
-              Quick Guide
+              {t("navigationTitle")}
             </h3>
             <nav className="flex flex-col gap-1">
               {sections.map((section) => (
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left text-xs lg:text-sm truncate py-3.5 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-xs lg:text-sm truncate py-3.5 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
                       : "hover:bg-white/5 text-gray-400"
@@ -124,10 +122,12 @@ const FacebookDeletionPage = () => {
           >
             {/* 1. Deletion Methods */}
             <div id="deletion-methods">
-              <div className="flex items-center gap-3 mb-8">
+              <div
+                className={`flex items-center gap-3 mb-8 ${locale === "ar" ? "justify-end" : ""}`}
+              >
                 <ShieldCheck className="text-[#B37C00] w-6 h-6" />
                 <h2 className="text-white text-xl md:text-2xl font-bold uppercase tracking-wide">
-                  1. How to Request Deletion
+                  {content.deletionMethods.title}
                 </h2>
               </div>
 
@@ -137,15 +137,13 @@ const FacebookDeletionPage = () => {
                     <Smartphone className="w-5 h-5 text-[#B37C00] group-hover:text-black" />
                   </div>
                   <h4 className="text-white font-bold mb-3 uppercase text-sm tracking-widest">
-                    In-App Method
+                    {content.deletionMethods.inAppTitle}
                   </h4>
                   <p className="text-sm text-gray-400 leading-relaxed">
-                    Log into your Quranity account, navigate to Settings, and
-                    select
+                    {content.deletionMethods.inAppDescription}
                     <span className="text-red-500 font-bold ml-1">
-                      &quot;Delete Account&quot;
+                      {content.deletionMethods.deleteAccountLabel}
                     </span>
-                    .
                   </p>
                 </div>
 
@@ -154,16 +152,16 @@ const FacebookDeletionPage = () => {
                     <Mail className="w-5 h-5 text-[#B37C00] group-hover:text-black" />
                   </div>
                   <h4 className="text-white font-bold mb-3 uppercase text-sm tracking-widest">
-                    Direct Email
+                    {content.deletionMethods.emailTitle}
                   </h4>
                   <p className="text-sm text-gray-400 leading-relaxed">
-                    Send a request to{" "}
+                    {content.deletionMethods.emailDescription}{" "}
                     <span className="text-white font-medium">
-                      support@quranity.app
+                      {content.contact.email}
                     </span>{" "}
-                    with the subject line
+                    {content.deletionMethods.emailDescriptionSuffix}
                     <span className="italic block mt-1 opacity-70">
-                      &quot;Facebook Data Deletion Request&quot;
+                      {content.deletionMethods.emailSubject}
                     </span>
                   </p>
                 </div>
@@ -174,20 +172,20 @@ const FacebookDeletionPage = () => {
 
             {/* 2. Meta Callback Support */}
             <div id="meta-callback">
-              <div className="flex items-center gap-3 mb-6">
+              <div
+                className={`flex items-center gap-3 mb-6 ${locale === "ar" ? "justify-end" : ""}`}
+              >
                 <ExternalLink className="text-[#B37C00] w-6 h-6" />
                 <h2 className="text-white text-xl font-bold uppercase tracking-wide">
-                  2. Meta Callback Support
+                  {content.metaCallback.title}
                 </h2>
               </div>
               <div className="bg-[#B37C00]/5 border-l-4 border-[#B37C00] p-6 rounded-r-xl">
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed italic">
-                  &quot;If you initiate deletion directly through Facebook,
-                  Facebook may send us a data deletion callback
-                  notification.&quot;
+                  {content.metaCallback.description}
                 </p>
                 <p className="mt-4 text-xs text-gray-500 leading-relaxed uppercase tracking-widest font-bold">
-                  Automated Processing Enabled
+                  {content.metaCallback.badge}
                 </p>
               </div>
             </div>
@@ -197,25 +195,27 @@ const FacebookDeletionPage = () => {
             {/* 3. Processing & Retention */}
             <div id="processing-time">
               <h2 className="text-white text-xl font-bold mb-8 uppercase tracking-wide">
-                3. Processing & Retention
+                {content.processingTime.title}
               </h2>
               <div className="space-y-6">
-                <div className="flex gap-4 items-start">
+                <div
+                  className={`flex items-center gap-3 ${locale === "ar" ? " flex-row-reverse" : ""}`}
+                >
                   <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-[10px] font-bold text-white mt-1">
                     01
                   </div>
                   <p className="text-sm md:text-base text-gray-400">
-                    Upon verification of your identity, your data will be
-                    deleted from active systems within **30 days**.
+                    {content.processingTime.item1}
                   </p>
                 </div>
-                <div className="flex gap-4 items-start">
+                <div
+                  className={`flex items-center gap-3 ${locale === "ar" ? " flex-row-reverse" : ""}`}
+                >
                   <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-[10px] font-bold text-white mt-1">
                     02
                   </div>
                   <p className="text-sm md:text-base text-gray-400">
-                    Certain records may remain temporarily in secure backups for
-                    legal or security purposes.
+                    {content.processingTime.item2}
                   </p>
                 </div>
               </div>
@@ -225,27 +225,22 @@ const FacebookDeletionPage = () => {
 
             {/* 4. Privacy Commitment */}
             <div id="privacy-commitment">
-              <div className="flex items-center gap-3 mb-6">
+              <div
+                className={`flex items-center gap-3 mb-6 ${locale === "ar" ? "justify-end" : ""}`}
+              >
                 <Info className="text-[#B37C00] w-6 h-6" />
                 <h2 className="text-white text-xl font-bold uppercase tracking-wide">
-                  4. Privacy Commitment
+                  {content.privacyCommitment.title}
                 </h2>
               </div>
               <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
-                As an Islamic educational platform, Quranity treats your data as
-                a trust (Amanah). We collect only what is necessary to provide
-                spiritual services.
+                {content.privacyCommitment.description}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  "No profiling or targeted ads",
-                  "No data sales to third parties",
-                  "Encrypted data transmission",
-                  "Transparent handling protocols",
-                ].map((text, i) => (
+                {content.privacyCommitment.points.map((text, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5"
+                    className={`flex items-center gap-3 ${locale === "ar" ? "flex-row-reverse" : ""}`}
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[#B37C00]" />
                     <span className="text-xs text-gray-300 uppercase tracking-tighter">
@@ -261,37 +256,37 @@ const FacebookDeletionPage = () => {
             {/* 5. Contact & Support */}
             <div id="contact">
               <h2 className="text-white text-xl font-bold mb-8 uppercase tracking-wide">
-                5. Contact & Support
+                {content.contact.title}
               </h2>
               <div className="bg-white/5 rounded-2xl border border-white/5 overflow-hidden">
                 <div className="p-8 space-y-6">
-                  <div className="flex items-start gap-4">
+                  <div className={`flex items-start gap-4 ${locale === "ar" ? "flex-row-reverse" : ""}`}>
                     <MapPin className="text-[#B37C00] shrink-0" size={20} />
                     <div>
                       <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-1">
-                        Entity Headquarters
+                        {content.contact.entityTitle}
                       </h5>
                       <p className="text-sm text-gray-500 leading-relaxed">
-                        QURANITY LLC
+                        {content.contact.company}
                         <br />
-                        30 N Gould St Ste R
+                        {content.contact.addressLine1}
                         <br />
-                        Sheridan, Wyoming 82801
+                        {content.contact.addressLine2}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+                  <div className={`flex items-center gap-4 pt-4 border-t border-white/5 ${locale === "ar" ? "flex-row-reverse" : ""}`}>
                     <Mail className="text-[#B37C00] shrink-0" size={20} />
                     <div>
                       <h5 className="text-white font-bold text-xs uppercase tracking-widest mb-1">
-                        Compliance Email
+                        {content.contact.complianceTitle}
                       </h5>
                       <a
-                        href="mailto:support@quranity.app"
+                        href={`mailto:${content.contact.email}`}
                         className="text-sm text-[#B37C00] hover:underline transition-all"
                       >
-                        support@quranity.app
+                        {content.contact.email}
                       </a>
                     </div>
                   </div>
@@ -299,7 +294,7 @@ const FacebookDeletionPage = () => {
 
                 <div className="bg-[#B37C00] p-4 text-center">
                   <p className="text-black text-[10px] font-bold uppercase tracking-[0.2em]">
-                    Protecting your spiritual journey through data integrity.
+                    {content.contact.footerLine}
                   </p>
                 </div>
               </div>
@@ -311,7 +306,7 @@ const FacebookDeletionPage = () => {
       {/* Simplified Footer */}
       <footer className="border-t border-white/5 py-12 text-center">
         <p className="text-[10px] text-gray-600 uppercase tracking-[0.4em]">
-          © 2026 Quranity LLC • All Rights Reserved
+          {t("bottomFooter")}
         </p>
       </footer>
     </div>

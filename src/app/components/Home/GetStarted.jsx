@@ -3,8 +3,11 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const GetStarted = () => {
+  const t = useTranslations("getStarted");
+
   return (
     <section className="py-12 md:py-16 xl:py-20">
       <div className="max-w-400 mx-auto w-11/12 flex flex-col items-center justify-center relative">
@@ -17,7 +20,7 @@ const GetStarted = () => {
               WebkitTextStroke: "1px rgba(255, 255, 255, 0.15)",
             }}
           >
-            QURANITY
+            {t("brand")}
           </h2>
 
           {/* Foreground Button Layer */}
@@ -28,7 +31,7 @@ const GetStarted = () => {
               className="flex items-center gap-2 group"
             >
               <span className="text-white text-4xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase">
-                Get Started
+                {t("cta")}
               </span>
               <ChevronRight className="text-white w-8 h-8 md:w-16 md:h-16 lg:w-20 lg:h-20 stroke-[3px] transition-transform group-hover:translate-x-2" />
             </motion.button>

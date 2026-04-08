@@ -1,0 +1,516 @@
+{
+  "navigation": {
+    "brand": "Quranity",
+    "logoAlt": "Logoja e Quranity",
+    "profileAlt": "Fotografia e profilit të përdoruesit",
+    "home": "Shtëpia",
+    "about": "Rreth",
+    "features": "Karakteristikat",
+    "pricing": "Çmimet",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet dhe Përqindjet",
+    "facebookDeletion": "Faqja e Fshirjes së Facebook",
+    "contact": "Na Kontaktoni",
+    "menu": "Menu",
+    "emailPlaceholder": "Shkruani emailin tuaj",
+    "getApp": "Merr Aplikacionin"
+  },
+  "hero": {
+    "title": "Pyet. Mëso. Reflekto. Rritu me Quranity",
+    "subtitle": "Qëndro i lidhur me Allahun me orare të sakta të namazit, ajete të përditshme të Kuranit dhe udhëzim të besueshëm islam - të gjitha në një aplikacion të bukur e të ndërtuar me kujdes.",
+    "cta": "Fillo Tani",
+    "appImageAlt": "Parapamje e aplikacionit Quranity"
+  },
+  "guide": {
+    "title": "Udhëhequr nga njohuria autentike.",
+    "description": "Mësoni mësimet Kuranore nëpërmjet platformës sonë inovative",
+    "cards": {
+      "quran": {
+        "alt": "Ilustrim i Kuranit",
+        "title": "Udhëzim i bazuar në Kuran dhe Hadith",
+        "description": "Lexo Kuranin me qartësi dhe përqendrim. Shijo pamje të plota të sureve, theksim të texhvidit, përkthime dhe recitim audio."
+      },
+      "prayer": {
+        "alt": "Ilustrim i xhamisë",
+        "title": "Oraret e sakta të namazit",
+        "description": "Mos humb asnjë namaz me orare të sakta, numërim mbrapsht për namazin tjetër, ndjekje të lindjes dhe perëndimit të diellit dhe udhëzim për namazet nafile."
+      },
+      "ai": {
+        "alt": "Ilustrim i inteligjencës artificiale",
+        "title": "AI me kufij islamë",
+        "description": "Bëj pyetje nga jeta e përditshme dhe merr udhëzim islam të menduar e të respektueshëm për shpirtëroren, karakterin dhe sfidat e përditshme."
+      }
+    }
+  },
+  "spiritual": {
+    "title": "Gjithçka që ju nevojitet për të qëndruar i lidhur shpirtërisht",
+    "description": "Thelloni kuptimin tuaj të mësimeve islame",
+    "appAlt": "Pamje paraprake e aplikacionit",
+    "features": {
+      "quran": {
+        "alt": "Ikonë e Kuranit",
+        "title": "Kurani, çdo ditë",
+        "description": "Lexo Kuranin me qartësi dhe përqendrim. Shijo pamje të plota të sureve, theksim të texhvidit, përkthime, recitim audio dhe ajete ditore për reflektim."
+      },
+      "prayer": {
+        "alt": "Ikonë e xhamisë",
+        "title": "Ndërgjegjësim i saktë për namazin dhe kohën",
+        "description": "Mos humb asnjë namaz me orare të sakta, numërim mbrapsht për namazin tjetër, ndjekje të lindjes dhe perëndimit të diellit dhe udhëzim për namazet nafile, të përshtatura për vendndodhjen tuaj."
+      },
+      "ai": {
+        "alt": "Ikonë e AI-së",
+        "title": "AI Musliman - Udhëzim që mund t'i besoni",
+        "description": "Merr përgjigje të menjëhershme për pyetjet tuaja shpirtërore me AI-në tonë të integruar, të trajnuar për të dhënë udhëzim të ndërgjegjshëm ndaj kontekstit nga burime të besueshme."
+      }
+    }
+  },
+  "faq": {
+    "title": "Pyetje të zakonshme rreth Quranity",
+    "description": "Gjeni përgjigje për pyetjet e zakonshme rreth Quranity",
+    "items": {
+      "whatIs": {
+        "question": "Çfarë është Quranity?",
+        "answer": "Quranity është një aplikacion islam gjithëpërfshirës i krijuar për t'i ndihmuar muslimanët të qëndrojnë të lidhur me besimin e tyre përmes Kuranit, orareve të namazit, kujtesave ditore dhe udhëzimit islam me AI."
+      },
+      "free": {
+        "question": "A është Quranity falas?",
+        "answer": "Po, Quranity ofron një version falas të plotë që përfshin të gjitha veçoritë thelbësore për udhëtimin tuaj të përditshëm shpirtëror."
+      },
+      "platforms": {
+        "question": "Cilat platforma mbështet Quranity?",
+        "answer": "Quranity është i disponueshëm në të gjitha platformat kryesore, përfshirë iOS, Android dhe çdo shfletues modern web."
+      },
+      "difference": {
+        "question": "Si ndryshon Quranity nga aplikacionet e tjera islame?",
+        "answer": "Quranity ndërthur përmbajtje islame të besueshme me teknologji moderne AI, duke ofruar një përvojë të personalizuar, inteligjente dhe të përqendruar shpirtërisht në një aplikacion të vetëm."
+      },
+      "fatwa": {
+        "question": "A jep AI-ja fetva ose vendime personale?",
+        "answer": "Jo, AI-ja është krijuar për udhëzim edukativ dhe informacion të bazuar në tekste të mirënjohura; për fetva formale, ne gjithmonë rekomandojmë të konsultoheni me një dijetar të kualifikuar."
+      },
+      "sources": {
+        "question": "Cilat burime përdoren për Hadithin dhe përmbajtjen islame?",
+        "answer": "Ne përdorim burime primare autentike dhe biblioteka digjitale të verifikuara për të siguruar që Hadithi dhe përmbajtja dijetare të përmbushin standarde të larta besueshmërie."
+      },
+      "dataSafe": {
+        "question": "A janë të sigurta të dhënat e mia me Quranity?",
+        "answer": "Privatësia e të dhënave është një prioritet thelbësor. Ne përdorim enkriptim standard dhe protokolle sigurie për të siguruar që informacioni juaj personal të mbetet privat dhe i sigurt."
+      },
+      "conversations": {
+        "question": "A i ruan Quranity bisedat e mia me AI-në?",
+        "answer": "Bisedat ruhen lokalisht ose të enkriptuara për të përmirësuar përvojën tuaj të personalizuar, ndërsa ju keni kontroll të plotë mbi historikun e të dhënave në çdo kohë."
+      }
+    }
+  },
+  "footer": {
+    "brand": "Quranity",
+    "brandAlt": "Logoja e Quranity",
+    "copyright": "© {year} Quranity LLC. Të gjitha të drejtat e rezervuara.",
+    "rights": "Të gjitha të drejtat e rezervuara",
+    "followUs": "Na Ndiqni",
+    "quickLinks": "Lidhjet e Shpejta",
+    "sections": {
+      "home": {
+        "title": "Shtëpia",
+        "links": {
+          "privacy": "Politika e Privatësisë",
+          "terms": "Kushtet",
+          "contact": "Na Kontaktoni"
+        }
+      },
+      "info": {
+        "title": "Informacion",
+        "links": {
+          "faq": "Pyetje të shpeshta",
+          "facebookDeletion": "Faqja e Fshirjes së Facebook",
+          "cookies": "Politika e Cookies"
+        }
+      },
+      "social": {
+        "title": "Rrjetet Sociale",
+        "links": {
+          "facebook": "Facebook",
+          "instagram": "Instagram",
+          "youtube": "YouTube"
+        }
+      }
+    }
+  },
+  "guidanceRoot": {
+    "title": "Udhëzim i rrënjosur në besim. i fuqizuar nga inteligjenca.",
+    "backgroundAlt": "Animacion dekorativ në sfond",
+    "phoneAlt": "Telefon me pamje të aplikacionit"
+  },
+  "getStarted": {
+    "brand": "QURANITY",
+    "cta": "Fillo Tani"
+  },
+  "pricing": {
+    "title": "Fillo falas. Përmirëso kur të jesh gati.",
+    "description": "Quranity ofron një plan falas që të eksplorosh veçoritë kryesore pa angazhim. Kur të jesh gati, zhblloko udhëzim më të thellë AI dhe përvoja premium.",
+    "plans": {
+      "basic": {
+        "name": "Bazë",
+        "price": "Falas",
+        "features": ["Qasje standarde", "Ajete ditore"],
+        "cta": "Përmirëso në Premium"
+      },
+      "premium": {
+        "name": "Premium",
+        "badge": "Më i Popullarizuari",
+        "price": "$4.99",
+        "features": ["Qasje e pakufizuar në AI", "Recitime video 4K", "Modalitet jashtë linje", "Mbështetje me përparësi"],
+        "cta": "Përmirëso në Premium"
+      },
+      "pro": {
+        "name": "Premium",
+        "badge": "Popullor",
+        "price": "$4.99",
+        "features": ["Qasje e pakufizuar në AI", "Recitime video 4K", "Modalitet jashtë linje", "Mbështetje me përparësi"],
+        "cta": "Përmirëso në Premium"
+      }
+    }
+  },
+  "testimonial": {
+    "title": "Çfarë thonë përdoruesit tanë",
+    "items": [
+      {
+        "name": "Benjamin Harper",
+        "role": "Menaxher Marketingu",
+        "time": "3 ditë më parë",
+        "content": "Më pëlqen të përdor këtë platformë sepse mbështetja është vërtet shumë e mirë.",
+        "image": "https://i.pravatar.cc/150?u=ben"
+      },
+      {
+        "name": "Maria Bigu",
+        "role": "Mbështetje ndaj Klientit",
+        "time": "3 ditë më parë",
+        "content": "Ndihem e entuziazmuar duke e përdorur këtë platformë. Përvoja është shumë e rrjedhshme.",
+        "image": "https://i.pravatar.cc/150?u=maria"
+      },
+      {
+        "name": "Roberta Francis",
+        "role": "Analiste Financiare",
+        "time": "5 ditë më parë",
+        "content": "Ka qenë një përvojë shumë e mirë deri tani dhe ekipi i mbështetjes është vazhdimisht i dobishëm.",
+        "image": "https://i.pravatar.cc/150?u=roberta"
+      },
+      {
+        "name": "Ethan Mitchell",
+        "role": "Ekzekutiv i Shitjeve",
+        "time": "2 ditë më parë",
+        "content": "U befasova këndshëm nga rezultatet. Ndihet si një fillim i fortë për mua.",
+        "image": "https://i.pravatar.cc/150?u=ethan"
+      },
+      {
+        "name": "Ava Foster",
+        "role": "Inxhiniere Softueri",
+        "time": "1 ditë më parë",
+        "content": "Përdorimi i kësaj platforme ka qenë shumë i lehtë. Përvoja ndihet e sigurt dhe mbështetja është e shkëlqyer.",
+        "image": "https://i.pravatar.cc/150?u=ava"
+      },
+      {
+        "name": "Lucas Bennett",
+        "role": "Tech Sprint",
+        "time": "1 ditë më parë",
+        "content": "Regjistrimi është i lehtë dhe platforma ndihet miqësore dhe e besueshme.",
+        "image": "https://i.pravatar.cc/150?u=lucas"
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "company": "Quranity LLC",
+    "title": "Politika e Privatësisë",
+    "effectiveDate": "Data e hyrjes në fuqi: 25 shkurt 2026",
+    "navigationTitle": "Navigimi i privatësisë",
+    "sections": [
+      { "id": "intro", "title": "HYRJE" },
+      { "id": "collection", "title": "INFORMACIONET QË MBLEDHIM" },
+      { "id": "usage", "title": "SI I PËRDORIM INFORMACIONET" },
+      { "id": "ai-transparency", "title": "INTELIGJENCA ARTIFICIALE" },
+      { "id": "advertising", "title": "REKLAMIMI DHE ANALITIKA" },
+      { "id": "data-transfers", "title": "TRANSFERIMET NDËRKOMBËTARE" },
+      { "id": "retention", "title": "RUAJTJA E TË DHËNAVE" },
+      { "id": "rights", "title": "TË DREJTAT TUAJA" },
+      { "id": "meta-deletion", "title": "FJALIMI I TË DHËNAVE TË PËRDORUESIT" },
+      { "id": "security", "title": "SIGURIA" },
+      { "id": "children", "title": "PRIVATËSIA E FËMIJËVE" },
+      { "id": "contact", "title": "INFORMACIONI I KONTAKTIT" }
+    ],
+    "content": {
+      "intro": {
+        "title": "1. Hyrje",
+        "paragraphs": [
+          "Kjo Politikë e Privatësisë përshkruan se si QURANITY LLC (\"Quranity,\" \"Kompania,\" \"ne,\" \"tona,\" ose \"neve\") mbledh, përdor, përpunon, ruan dhe mbron informacionin personal kur përdorni aplikacionin celular Quranity, faqen e internetit, veçoritë e AI-së, modulet video (Shorts dhe Stories), mjetet e Kuranit, mjetet e namazit dhe shërbimet përkatëse (bashkërisht, \"Shërbimet\").",
+          "Duke përdorur Shërbimet, ju pranoni se e keni lexuar dhe kuptuar këtë Politikë të Privatësisë."
+        ]
+      },
+      "collection": {
+        "title": "2. Informacionet që mbledhim",
+        "cards": [
+          {
+            "title": "Llogaria dhe Teknologjia",
+            "items": [
+              "Llogaria: emri, emaili, emri i përdoruesit, statusi i abonimit.",
+              "Pajisja: adresa IP, OS, versioni i aplikacionit, diagnostika."
+            ]
+          },
+          {
+            "title": "Përdorimi dhe Vendndodhja",
+            "items": [
+              "Përdorimi: ndërveprime, kërkime në Kuran, faqeshënues, aktiviteti Shorts.",
+              "Vendndodhja: në nivel qyteti ose GPS për kohët e namazit/kiblën."
+            ]
+          }
+        ],
+        "note": "Shënim: Përdorimi i shërbimeve tona mund të zbulojë në mënyrë të natyrshme bindje fetare. Këto të dhëna përpunohen vetëm për të ofruar Shërbimet."
+      },
+      "usage": {
+        "title": "3. Si i përdorim informacionet",
+        "items": [
+          "Të ofrojmë dhe të mirëmbajmë Shërbimet.",
+          "Të japim kohët e namazit dhe drejtimin e kiblës.",
+          "Të menaxhojmë abonimet e platformës.",
+          "Të përmirësojmë funksionalitetin e platformës.",
+          "Të komunikojmë përditësime të shërbimit.",
+          "Të përmbushim detyrimet ligjore."
+        ]
+      },
+      "aiTransparency": {
+        "title": "4. Inteligjenca Artificiale",
+        "description": "AI ofron përgjigje të automatizuara të gjeneruara nga sistemet e inteligjencës artificiale. Këto përgjigje mund të mos jenë gjithmonë të sakta, të plota ose autoritative.",
+        "note": "Rezultatet e AI-së janë vetëm për qëllime informuese dhe nuk përbëjnë fetva, këshillë ligjore ose mjekësore."
+      },
+      "advertising": {
+        "title": "5. Reklamimi, Analitika dhe Meta SDK",
+        "description": "Ne përdorim mjete si Meta SDK dhe Meta Conversions API (CAPI). Teknologjitë e gjurmimit aktivizohen vetëm pas pëlqimit të përdoruesit kur kërkohet nga ligji.",
+        "highlight": "Quranity NUK shet informacion personal."
+      },
+      "dataTransfers": {
+        "title": "7. Transferimet e të dhënave",
+        "description": "Informacioni mund të përpunohet në Shtetet e Bashkuara. Ne zbatojmë Klauzola Standarde Kontraktuale (SCC) kur kërkohet."
+      },
+      "retention": {
+        "title": "8. Ruajtja e të dhënave",
+        "description": "Ne i ruajmë të dhënat për aq kohë sa është e nevojshme për të ofruar Shërbimet. Përdoruesit mund të kërkojnë fshirjen e llogarisë në çdo kohë."
+      },
+      "rights": {
+        "title": "9. Të drejtat tuaja",
+        "description": "Ju mund të keni të drejtë të aksesoni, korrigjoni, fshini ose kufizoni përpunimin e informacionit tuaj personal. Banorët e Kalifornisë mund të ushtrojnë të drejtat sipas CCPA/CPRA."
+      },
+      "metaDeletion": {
+        "title": "10. Fshirja e të dhënave të përdoruesit (kërkesë e Meta)",
+        "description": "Për të kërkuar fshirjen e të dhënave personale të lidhura me Facebook/Meta Login:",
+        "steps": [
+          "Hyni në Quranity dhe zgjidhni 'Fshi llogarinë'.",
+          "Dërgoni email në support@quranity.app me subjektin 'Kërkesë për fshirjen e të dhënave të Facebook'."
+        ],
+        "note": "Të dhënat do të fshihen nga sistemet aktive brenda 30 ditëve."
+      },
+      "security": {
+        "title": "11. Siguria",
+        "description": "Ne përdorim enkriptim TLS dhe kontrolle të kufizuara të aksesit. Asnjë transmetim në internet nuk është 100% i sigurt."
+      },
+      "children": {
+        "title": "12. Privatësia e fëmijëve",
+        "description": "Shërbimet nuk janë të drejtuara për fëmijët nën 13 vjeç (ose 16 në disa rajone). Ne nuk mbledhim me vetëdije informacion për të mitur."
+      },
+      "contact": {
+        "title": "14. Informacioni i kontaktit",
+        "company": "Quranity LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "termsPolicy": {
+    "company": "Quranity LLC",
+    "title": "KUSHTET DHE RREGULLAT",
+    "effectiveDate": "Data e hyrjes në fuqi: 25 shkurt 2026",
+    "navigationTitle": "Navigim i shpejtë",
+    "sections": [
+      { "id": "intro", "title": "PRANIMI I KUSHTEVE" },
+      { "id": "about", "title": "PËRSHKRIMI I SHËRBIMEVE" },
+      { "id": "content", "title": "LLOGARITË DHE ABONIMET" },
+      { "id": "muslim_ai", "title": "PËRGJEGJËSITË E PËRDORUESIT" },
+      { "id": "user_generated", "title": "PRONËSIA INTELEKTUALE" },
+      { "id": "features", "title": "MOHIMI I GARANCIVE" },
+      { "id": "payments", "title": "KUFIZIMI I PËRGJEGJËSISË" },
+      { "id": "indemnification", "title": "DËMSHPËRBLIMI" },
+      { "id": "arbitration", "title": "ARBITRAZH DHE ZGJIDHJE MOSMARRËVESHJESH" },
+      { "id": "force-majeure", "title": "FORCË MADHORE" },
+      { "id": "termination", "title": "PËRFUNDIMI" },
+      { "id": "contact", "title": "KONTAKTI" }
+    ],
+    "content": {
+      "intro": {
+        "title": "1. Pranimi i kushteve",
+        "description": "Duke hyrë ose përdorur aplikacionin celular Quranity, faqen e internetit, sistemet AI, Shorts, Stories, mjetet e Kuranit dhe shërbimet përkatëse (\"Shërbimet\"), ju pranoni të jeni i lidhur me këto Kushte dhe Rregulla. Nëse nuk pajtoheni, ju lutemi mos përdorni Shërbimet."
+      },
+      "about": {
+        "title": "2. Përshkrimi i shërbimeve",
+        "description": "Quranity ofron përmbajtje edukative islame, veçori mediatike, mjete të namazit dhe përgjigje informuese të gjeneruara nga AI. Rezultatet e AI janë vetëm për qëllime informuese dhe nuk përbëjnë fetva, këshillë ligjore ose mjekësore."
+      },
+      "content": {
+        "title": "3. Llogaritë dhe abonimet",
+        "description": "Abonimet përpunohen përmes Apple App Store ose Google Play. Faturimi, rimbursimet dhe anulimet rregullohen nga politikat e platformës përkatëse. Ju jeni përgjegjës për ruajtjen e konfidencialitetit të kredencialeve të llogarisë suaj."
+      },
+      "muslimAi": {
+        "title": "4. Përgjegjësitë e përdoruesit",
+        "description": "Ju pranoni të mos keqpërdorni Shërbimet, të mos ndërhyni në funksionalitetin e platformës dhe të mos tentoni qasje të paautorizuar. Çdo përdorim i AI për të gjeneruar përmbajtje të dëmshme ose të ndaluar është rreptësisht i ndaluar."
+      },
+      "userGenerated": {
+        "title": "5. Pronësia intelektuale",
+        "description": "E gjithë përmbajtja, markat tregtare, identiteti i markës dhe teknologjia brenda Quranity janë pronë e QURANITY LLC ose e licencuesve të saj. Ju nuk mund të riprodhoni ose shpërndani asnjë pjesë të shërbimit pa leje të qartë."
+      },
+      "features": {
+        "title": "6. Mohimi i garancive",
+        "description": "Shërbimet ofrohen \"SI JANË\" dhe \"SIPAS DISPONUESHMËRISË\" pa garanci të asnjë lloji, të shprehura ose të nënkuptuara, përfshirë por pa u kufizuar në saktësinë e përmbajtjes së gjeneruar nga AI."
+      },
+      "payments": {
+        "title": "7. Kufizimi i përgjegjësisë",
+        "description": "Në masën maksimale të lejuar nga ligji, përgjegjësia totale e Quranity që lind nga ose lidhet me Shërbimet nuk do të tejkalojë shumën totale të paguar nga ju ndaj Quranity gjatë dymbëdhjetë (12) muajve para pretendimit."
+      },
+      "indemnification": {
+        "title": "8. Dëmshpërblimi",
+        "description": "Ju pranoni të dëmshpërbleni dhe të mbroni QURANITY LLC nga pretendimet, dëmet dhe shpenzimet që lindin nga keqpërdorimi i Shërbimeve ose shkelja e këtyre Kushteve."
+      },
+      "arbitration": {
+        "title": "9. Arbitrazh dhe zgjidhje mosmarrëveshjesh",
+        "description": "Çdo mosmarrëveshje që lind nga ose lidhet me këto Kushte do të zgjidhet përmes arbitrazhit detyrues në bazë individuale. Paditë kolektive nuk lejohen. Ligji në fuqi: Shteti i Wyoming, Shtetet e Bashkuara."
+      },
+      "forceMajeure": {
+        "title": "10. Forcë madhore",
+        "description": "Quranity nuk mban përgjegjësi për vonesa ose dështime që rezultojnë nga shkaqe jashtë kontrollit të arsyeshëm, përfshirë fatkeqësi natyrore, greva ose dështime të ofruesve të internetit."
+      },
+      "termination": {
+        "title": "11. Përfundimi",
+        "description": "Ne mund të pezullojmë ose të përfundojmë qasjen në Shërbime menjëherë, pa njoftim paraprak, për sjellje që besojmë se shkel këto Kushte ose dëmton përdorues të tjerë."
+      },
+      "contact": {
+        "title": "12. Kontakti",
+        "company": "QURANITY LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "facebookDeletionPolicy": {
+    "company": "Quranity LLC",
+    "title": "Udhëzime për fshirjen",
+    "titleHighlight": "e të dhënave të përdoruesit",
+    "lastUpdated": "Përditësuar më: 25 shkurt 2026",
+    "navigationTitle": "Udhëzues i shpejtë",
+    "bottomFooter": "© 2026 Quranity LLC • Të gjitha të drejtat e rezervuara",
+    "sections": [
+      { "id": "deletion-methods", "title": "MËNYRAT E FSHIRJES" },
+      { "id": "meta-callback", "title": "MBËSHTETJE PËR META CALLBACK" },
+      { "id": "processing-time", "title": "PËRPUNIMI DHE RUAJTJA" },
+      { "id": "privacy-commitment", "title": "ANGAZHIMI PËR PRIVATËSI" },
+      { "id": "contact", "title": "KONTAKT DHE MBËSHTETJE" }
+    ],
+    "content": {
+      "deletionMethods": {
+        "title": "1. Si të kërkoni fshirjen",
+        "inAppTitle": "Metoda në aplikacion",
+        "inAppDescription": "Hyni në llogarinë tuaj Quranity, shkoni te Settings dhe zgjidhni",
+        "deleteAccountLabel": "\"Fshi llogarinë\".",
+        "emailTitle": "Email direkt",
+        "emailDescription": "Dërgoni kërkesë te",
+        "emailDescriptionSuffix": "me subjektin",
+        "emailSubject": "\"Facebook Data Deletion Request\""
+      },
+      "metaCallback": {
+        "title": "2. Mbështetje për Meta Callback",
+        "description": "\"Nëse e nisni fshirjen direkt nga Facebook, Facebook mund të na dërgojë një njoftim callback për fshirjen e të dhënave.\"",
+        "badge": "Përpunimi automatik i aktivizuar"
+      },
+      "processingTime": {
+        "title": "3. Përpunimi dhe ruajtja",
+        "item1": "Pas verifikimit të identitetit, të dhënat tuaja do të fshihen nga sistemet aktive brenda 30 ditëve.",
+        "item2": "Disa regjistra mund të mbeten përkohësisht në kopje rezervë të sigurta për arsye ligjore ose sigurie."
+      },
+      "privacyCommitment": {
+        "title": "4. Angazhimi për privatësi",
+        "description": "Si platformë edukative islame, Quranity i trajton të dhënat tuaja si amanet. Ne mbledhim vetëm atë që është e nevojshme për të ofruar shërbime shpirtërore.",
+        "points": [
+          "Pa profilizim ose reklama të targetuara",
+          "Pa shitje të të dhënave te palë të treta",
+          "Transmetim i enkriptuar i të dhënave",
+          "Protokolle transparente të trajtimit"
+        ]
+      },
+      "contact": {
+        "title": "5. Kontakt dhe mbështetje",
+        "entityTitle": "Selia e entitetit",
+        "company": "QURANITY LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "complianceTitle": "Email i përputhshmërisë",
+        "email": "support@quranity.app",
+        "footerLine": "Duke mbrojtur udhëtimin tuaj shpirtëror me integritet të të dhënave."
+      }
+    }
+  },
+  "cookiesPolicy": {
+    "company": "Quranity LLC",
+    "title": "Politika e Cookies",
+    "effectiveDate": "Data e hyrjes në fuqi: 25 shkurt 2026",
+    "navigationTitle": "Navigimi i politikës",
+    "sections": [
+      { "id": "what-are-cookies", "title": "ÇFARË JANË COOKIES" },
+      { "id": "types-of-cookies", "title": "LLOJET E COOKIES" },
+      { "id": "meta-analytics", "title": "META DHE MJETET ANALITIKE" },
+      { "id": "managing-cookies", "title": "MENAXHIMI I COOKIES" },
+      { "id": "contact", "title": "KONTAKTI" }
+    ],
+    "content": {
+      "whatAreCookies": {
+        "title": "1. Çfarë janë cookies",
+        "description": "Cookies janë skedarë të vegjël teksti që ruhen në pajisjen tuaj kur vizitoni një faqe interneti."
+      },
+      "typesOfCookies": {
+        "title": "2. Llojet e cookies që përdorim",
+        "items": [
+          { "title": "Cookies thelbësore:", "description": "Të nevojshme për funksionimin e faqes." },
+          { "title": "Cookies analitike:", "description": "Na ndihmojnë të kuptojmë modelet e përdorimit." },
+          { "title": "Cookies marketingu:", "description": "Përdoren për reklama dhe integrime me Meta, sipas pëlqimit tuaj." }
+        ]
+      },
+      "metaAnalytics": {
+        "title": "3. Meta dhe mjetet analitike",
+        "description1": "Ne mund të përdorim Meta Pixel, Meta Conversions API (CAPI) dhe teknologji të ngjashme.",
+        "description2": "Kur kërkohet nga ligji, këto mjete aktivizohen vetëm pas pëlqimit të përdoruesit."
+      },
+      "managingCookies": {
+        "title": "4. Menaxhimi i cookies",
+        "description": "Mund të menaxhoni preferencat e cookies përmes cilësimeve të shfletuesit ose përmes banerit të pëlqimit në faqen tonë."
+      },
+      "contact": {
+        "title": "5. Kontakti",
+        "company": "QURANITY LLC",
+        "description": "Për pyetje mbi këtë politikë, ju lutemi kontaktoni:",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Jemi këtu për t'ju ndihmuar",
+    "description": "Keni pyetje, komente apo nevojë për mbështetje? Do të na vinte mirë të dëgjonim nga ju. Quranity është ndërtuar me kujdes për komunitetin musliman global, dhe mendimi juaj na ndihmon të përmirësohemi.",
+    "nameLabel": "Emri juaj",
+    "namePlaceholder": "Emri",
+    "emailLabel": "Emaili juaj",
+    "emailPlaceholder": "Emaili",
+    "messageLabel": "Mesazhi",
+    "messagePlaceholder": "Shkruani mesazhin",
+    "cta": "Na lini një mesazh"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "albanian": "Shqip",
+    "selectLanguage": "Zgjidh Gjuhën"
+  }
+}

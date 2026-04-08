@@ -3,17 +3,14 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-
-const sections = [
-  { id: "what-are-cookies", title: "WHAT ARE COOKIES" },
-  { id: "types-of-cookies", title: "TYPES OF COOKIES" },
-  { id: "meta-analytics", title: "META & ANALYTICS TOOLS" },
-  { id: "managing-cookies", title: "MANAGING COOKIES" },
-  { id: "contact", title: "CONTACT" },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 const CookiePage = () => {
+  const t = useTranslations("cookiesPolicy");
+  const sections = t.raw("sections");
+  const content = t.raw("content");
   const [activeSection, setActiveSection] = useState("what-are-cookies");
+  const locale = useLocale();
 
   useEffect(() => {
     const observerOptions = {
@@ -41,7 +38,7 @@ const CookiePage = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [sections]);
 
   return (
     <div className="selection:bg-[#B37C00]/30 text-gray-300">
@@ -64,37 +61,39 @@ const CookiePage = () => {
         <div className="flex items-center gap-3 opacity-60">
           <span className="h-px w-8 bg-gray-500"></span>
           <span className="text-gray-400 uppercase tracking-[0.3em] text-xs font-bold">
-            Quranity LLC
+            {t("company")}
           </span>
           <span className="h-px w-8 bg-gray-500"></span>
         </div>
 
         {/* Main Title */}
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight uppercase">
-          Cookie Policy
+          {t("title")}
         </h1>
 
         {/* Effective Date Badge */}
         <div className="mt-6 px-4 py-1.5 border border-white/10 rounded-full bg-white/5">
           <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-medium">
-            Effective Date: February 25, 2026
+            {t("effectiveDate")}
           </p>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto w-11/12 pb-20 flex flex-col md:flex-row gap-8">
+      <main
+        className={`max-w-400 mx-auto w-11/12 pb-20 flex flex-col md:flex-row gap-8 ${locale === "ar" ? "lg:flex-row-reverse text-right" : "lg:flex-row"}`}
+      >
         {/* Sidebar Navigation */}
         <aside className="md:w-1/4 h-fit md:sticky md:top-24">
           <div className="bg-[#121212] rounded-2xl p-2 border border-white/5">
             <h3 className="text-sm font-semibold p-4 text-white mb-2">
-              Policy Navigation
+              {t("navigationTitle")}
             </h3>
             <nav className="flex flex-col gap-1">
               {sections.map((section) => (
                 <Link
                   href={`#${section.id}`}
                   key={section.id}
-                  className={`text-left text-xs lg:text-sm truncate py-3 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-xs lg:text-sm truncate py-3 px-4 rounded-lg transition-all duration-300 ${
                     activeSection === section.id
                       ? "bg-[#B37C00] text-white font-semibold shadow-lg"
                       : "hover:bg-white/5 text-gray-400"
@@ -118,11 +117,10 @@ const CookiePage = () => {
             {/* What are Cookies */}
             <div id="what-are-cookies">
               <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
-                1.What Are Cookies
+                {content.whatAreCookies.title}
               </h2>
               <p className="text-sm md:text-base leading-relaxed text-gray-400">
-                Cookies are small text files stored on your device when you
-                visit a website.
+                {content.whatAreCookies.description}
               </p>
             </div>
 
@@ -131,34 +129,17 @@ const CookiePage = () => {
             {/* Types of Cookies */}
             <div id="types-of-cookies">
               <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
-                2.Types of Cookies We Use
+                {content.typesOfCookies.title}
               </h2>
-              <ul className="space-y-4 text-sm md:text-base text-gray-400">
-                <li className="flex gap-3">
-                  <span className="text-[#B37C00]">•</span>
-
-                  <span>
-                    <strong>Essential Cookies:</strong> Required for website
-                    functionality.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B37C00]">•</span>
-
-                  <span>
-                    <strong>Analytics Cookies:</strong> Help us understand usage
-                    patterns.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B37C00]">•</span>
-
-                  <span>
-                    <strong>Marketing Cookies:</strong> Used for advertising and
-                    Meta integrations, subject to your consent.
-                  </span>
-                </li>
-              </ul>
+              <ol className="space-y-4 text-sm md:text-base text-gray-400 list-disc list-inside">
+                {content.typesOfCookies.items.map((item) => (
+                  <li key={item.title} className="">
+                    <span>
+                      <strong>{item.title}</strong> {item.description}
+                    </span>
+                  </li>
+                ))}
+              </ol>
             </div>
 
             <hr className="border-white/5" />
@@ -166,15 +147,13 @@ const CookiePage = () => {
             {/* Meta & Analytics */}
             <div id="meta-analytics">
               <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
-                3.Meta & Analytics Tools
+                {content.metaAnalytics.title}
               </h2>
               <p className="text-sm md:text-base leading-relaxed text-gray-400 mb-4">
-                We may use Meta Pixel, Meta Conversions API (CAPI), and similar
-                technologies.
+                {content.metaAnalytics.description1}
               </p>
               <p className="text-sm md:text-base leading-relaxed text-gray-400">
-                Where required by law, these tools are activated only after user
-                consent.
+                {content.metaAnalytics.description2}
               </p>
             </div>
 
@@ -183,11 +162,10 @@ const CookiePage = () => {
             {/* Managing Cookies */}
             <div id="managing-cookies">
               <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
-                4.Managing Cookies
+                {content.managingCookies.title}
               </h2>
               <p className="text-sm md:text-base leading-relaxed text-gray-400">
-                You can manage cookie preferences through your browser settings
-                or our website's consent banner.
+                {content.managingCookies.description}
               </p>
             </div>
 
@@ -196,20 +174,20 @@ const CookiePage = () => {
             {/* Contact */}
             <div id="contact">
               <h2 className="text-white text-xl font-semibold mb-4 uppercase tracking-wide">
-                5.Contact
+                {content.contact.title}
               </h2>
               <div className="text-sm md:text-base text-gray-400 space-y-1 bg-white/5 p-6 rounded-xl border border-white/5">
-                <p className="font-bold text-white">QURANITY LLC</p>
-                <p className="pt-2">
-                  For questions regarding this policy, please contact:
+                <p className="font-bold text-white">
+                  {content.contact.company}
                 </p>
+                <p className="pt-2">{content.contact.description}</p>
                 <p className="font-medium">
                   Email:{" "}
                   <a
-                    href="mailto:support@quranity.app"
+                    href={`mailto:${content.contact.email}`}
                     className="text-[#B37C00] hover:underline"
                   >
-                    support@quranity.app
+                    {content.contact.email}
                   </a>
                 </p>
               </div>

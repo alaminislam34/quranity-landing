@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Menu,
   X,
@@ -14,20 +15,39 @@ import {
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
-
-// Updated links based on your provided design image
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms & Condition", href: "/terms" },
-  { name: "Facebook Deletion Page", href: "/facebook-terms" },
-  { name: "Contact Us", href: "/contact" },
-];
+import LanguageSwitcher from "../LanguageSwitcher";
+import { localizeRoute } from "@/lib/i18n-utils";
 
 export default function Navbar() {
+  const t = useTranslations("navigation");
+  const locale = useLocale();
   const pathname = usePathname();
   const sidebarRef = useRef(null);
   const dropdownRef = useRef(null);
+
+  const links = [
+    { name: t("home"), href: localizeRoute("/", locale), segment: "" },
+    {
+      name: t("privacy"),
+      href: localizeRoute("/privacy", locale),
+      segment: "privacy",
+    },
+    {
+      name: t("terms"),
+      href: localizeRoute("/terms", locale),
+      segment: "terms",
+    },
+    {
+      name: t("facebookDeletion"),
+      href: localizeRoute("/facebook-terms", locale),
+      segment: "facebook-terms",
+    },
+    {
+      name: t("contact"),
+      href: localizeRoute("/contact", locale),
+      segment: "contact",
+    },
+  ];
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -35,7 +55,6 @@ export default function Navbar() {
 
   // Mocking auth - replace with your actual auth hook
   const { user, loading } = { user: null, loading: false };
-
   const closeAll = () => {
     setMenuOpen(false);
     setShowDropdown(false);
@@ -56,24 +75,27 @@ export default function Navbar() {
     <nav className="sticky top-0 backdrop-blur-3xl bg-background shadow-md shadow-white/3 z-50 py-2">
       <div className="max-w-400 mx-auto w-11/12">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="shrink-0 flex items-center gap-2 flex-row">
+          <Link
+            href={localizeRoute("/", locale)}
+            className="shrink-0 flex items-center gap-2 flex-row"
+          >
             <Image
               src="/logos/quranity.jpg"
               height={200}
               width={200}
-              alt="Logo"
+                alt={t("logoAlt")}
               className="rounded-xl max-w-15 shadow-lg shadow-black/50"
             />
-            <p className="text-white font-medium text-lg">Quranity</p>
+            <p className="text-white font-medium text-lg">{t("brand")}</p>
           </Link>
 
           <ul className="hidden lg:flex items-center gap-10">
             {links.map((link) => (
-              <li key={link.href}>
+              <li key={link.segment}>
                 <Link
                   href={link.href}
                   className={`text-[15px] transition-colors duration-200 ${
-                    pathname === link.href
+                    pathname === link.href || pathname.endsWith(link.segment)
                       ? "text-[#c28e2e] font-medium"
                       : "text-gray-300 hover:text-white"
                   }`}
@@ -84,29 +106,33 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {user ? (
-            <div className="relative" ref={dropdownRef}>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+
+            {user ? (
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setShowDropdown(!showDropdown)}
+                  className="flex items-center border border-white/10 p-0.5 rounded-full cursor-pointer"
+                >
+                  <Image
+                    src={user.image}
+                    width={34}
+                    height={34}
+                    className="rounded-full"
+                      alt={t("profileAlt")}
+                  />
+                </button>
+              </div>
+            ) : (
               <button
-                onClick={() => setShowDropdown(!showDropdown)}
-                className="flex items-center border border-white/10 p-0.5 rounded-full cursor-pointer"
+                className="lg:hidden p-2 text-gray-400 cursor-pointer"
+                onClick={() => setMenuOpen(true)}
               >
-                <Image
-                  src={user.image}
-                  width={34}
-                  height={34}
-                  className="rounded-full"
-                  alt="User"
-                />
+                <Menu size={28} />
               </button>
-            </div>
-          ) : (
-            <button
-              className="lg:hidden p-2 text-gray-400 cursor-pointer"
-              onClick={() => setMenuOpen(true)}
-            >
-              <Menu size={28} />
-            </button>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
@@ -123,7 +149,7 @@ export default function Navbar() {
           className={`absolute right-0 top-0 z-50 h-full w-72 bg-black backdrop-blur-3xl p-8 border-l border-gray/50 transition-transform duration-300 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex justify-between items-center mb-10">
-            <span className="text-white font-bold text-xl">Menu</span>
+            <span className="text-white font-bold text-xl">{t("menu")}</span>
             <button
               onClick={() => setMenuOpen(false)}
               className="text-gray-400 hover:text-white"
@@ -134,10 +160,10 @@ export default function Navbar() {
           <nav className="flex flex-col gap-6">
             {links.map((link) => (
               <Link
-                key={link.href}
+                key={link.segment}
                 href={link.href}
                 onClick={closeAll}
-                className={`text-lg ${pathname === link.href ? "text-[#c28e2e]" : "text-gray-300"}`}
+                className={`text-lg ${pathname === link.href || pathname.endsWith(link.segment) ? "text-[#c28e2e]" : "text-gray-300"}`}
               >
                 {link.name}
               </Link>
@@ -150,13 +176,13 @@ export default function Navbar() {
                 />
                 <input
                   className="bg-transparent border-none text-[14px] text-white placeholder:text-gray-500 ml-3 focus:ring-0 w-48 outline-none"
-                  placeholder="Enter your mail"
+                  placeholder={t("emailPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <button className="w-full bg-[#c28e2e] text-white py-3 rounded-lg font-bold">
-                Get App
+                {t("getApp")}
               </button>
             </div>
           </nav>

@@ -1,0 +1,516 @@
+{
+  "navigation": {
+    "brand": "Quranity",
+    "logoAlt": "Quranity logo",
+    "profileAlt": "User profile picture",
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "pricing": "Pricing",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Condition",
+    "facebookDeletion": "Facebook Deletion Page",
+    "contact": "Contact Us",
+    "menu": "Menu",
+    "emailPlaceholder": "Enter your email",
+    "getApp": "Get App"
+  },
+  "hero": {
+    "title": "Ask. Learn. Reflect. Grow With Quranity",
+    "subtitle": "Stay connected to Allah with accurate prayer times, daily Qur’an verses, and trusted Islamic guidance - all in one beautifully designed app.",
+    "cta": "Get Started",
+    "appImageAlt": "Quranity app preview"
+  },
+  "guide": {
+    "title": "Guided by Authentic Knowledge.",
+    "description": "Learn Quranic teachings through our innovative platform",
+    "cards": {
+      "quran": {
+        "alt": "Quran illustration",
+        "title": "Qur’an and Hadith-based guidance",
+        "description": "Read the Qur’an with clarity and focus. Enjoy full Surah views, tajweed highlighting, translations, and audio recitation."
+      },
+      "prayer": {
+        "alt": "Mosque illustration",
+        "title": "Accurate prayer times",
+        "description": "Never miss a prayer with precise prayer times, next prayer countdowns, sunrise and sunset tracking, and Nafal prayer guidance."
+      },
+      "ai": {
+        "alt": "AI illustration",
+        "title": "AI with Islamic boundaries",
+        "description": "Ask real-life questions and receive thoughtful, respectful Islamic guidance across spirituality, character, and daily challenges."
+      }
+    }
+  },
+  "spiritual": {
+    "title": "Everything You Need to Stay Spiritually Connected",
+    "description": "Deepen your understanding of Islamic teachings",
+    "appAlt": "App preview image",
+    "features": {
+      "quran": {
+        "alt": "Quran icon",
+        "title": "Qur'an, Every Day",
+        "description": "Read the Qur'an with clarity and focus. Enjoy full Surah views, tajweed highlighting, translations, audio recitation, and daily verses for reflection."
+      },
+      "prayer": {
+        "alt": "Mosque icon",
+        "title": "Accurate Prayer and Time Awareness",
+        "description": "Never miss a prayer with precise prayer times, next prayer countdowns, sunrise and sunset tracking, and Nafal prayer guidance, customized to your location."
+      },
+      "ai": {
+        "alt": "AI icon",
+        "title": "Muslim AI - Guidance You Can Trust",
+        "description": "Get instant answers to your spiritual questions with our integrated AI, trained to provide context-aware guidance from reliable sources."
+      }
+    }
+  },
+  "faq": {
+    "title": "Common Questions About Quranity",
+    "description": "Find answers to common questions about Quranity",
+    "items": {
+      "whatIs": {
+        "question": "What is Quranity?",
+        "answer": "Quranity is an all-in-one Islamic app designed to help Muslims stay connected to their faith through the Qur'an, prayer times, daily reminders, and AI-powered Islamic guidance."
+      },
+      "free": {
+        "question": "Is Quranity free to use?",
+        "answer": "Yes, Quranity offers a comprehensive free version that includes all essential features for your daily spiritual journey."
+      },
+      "platforms": {
+        "question": "Which platforms does Quranity support (iOS / Android / Web)?",
+        "answer": "Quranity is available across all major platforms including iOS, Android, and any modern web browser."
+      },
+      "difference": {
+        "question": "How is Quranity different from other Islamic apps?",
+        "answer": "Quranity combines trusted Islamic content with modern AI technology, offering a personalized, intelligent, and spiritually focused experience - all in one app."
+      },
+      "fatwa": {
+        "question": "Does the AI provide fatwas or personal rulings?",
+        "answer": "No, the AI is designed for educational guidance and information based on established texts; for formal fatwas, we always recommend consulting a qualified scholar."
+      },
+      "sources": {
+        "question": "What sources are used for Hadith and Islamic content?",
+        "answer": "We use primary authentic sources and verified digital libraries to ensure all Hadith and scholarly content meet high standards of reliability."
+      },
+      "dataSafe": {
+        "question": "Is my data safe with Quranity?",
+        "answer": "Data privacy is a core priority. We use industry-standard encryption and security protocols to ensure your personal information remains private and secure."
+      },
+      "conversations": {
+        "question": "Does Quranity store my conversations with AI?",
+        "answer": "Conversations are stored locally or encrypted to improve your personalized experience, but you have full control over your data history at any time."
+      }
+    }
+  },
+  "footer": {
+    "brand": "Quranity",
+    "brandAlt": "Quranity logo",
+    "copyright": "© {year} Quranity LLC. All rights reserved.",
+    "rights": "All rights reserved",
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links",
+    "sections": {
+      "home": {
+        "title": "Home",
+        "links": {
+          "privacy": "Privacy Policy",
+          "terms": "Terms",
+          "contact": "Contact Us"
+        }
+      },
+      "info": {
+        "title": "Information",
+        "links": {
+          "faq": "FAQ",
+          "facebookDeletion": "Facebook Deletion Page",
+          "cookies": "Cookie Policy"
+        }
+      },
+      "social": {
+        "title": "Social",
+        "links": {
+          "facebook": "Facebook",
+          "instagram": "Instagram",
+          "youtube": "Youtube"
+        }
+      }
+    }
+  },
+  "guidanceRoot": {
+    "title": "Guidance Rooted in Faith. Powered by Intelligence.",
+    "backgroundAlt": "Decorative background animation",
+    "phoneAlt": "App preview phone"
+  },
+  "getStarted": {
+    "brand": "QURANITY",
+    "cta": "Get Started"
+  },
+  "pricing": {
+    "title": "Start for Free. Upgrade When You're Ready.",
+    "description": "Quranity offers a free plan so you can explore core features without commitment. When you're ready, unlock deeper AI guidance and premium experiences.",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "price": "Free",
+        "features": ["Standard Access", "Daily verses"],
+        "cta": "Upgrade to Premium"
+      },
+      "premium": {
+        "name": "Premium",
+        "badge": "Most Popular",
+        "price": "$4.99",
+        "features": ["Unlimited AI Access", "4K Video Recitations", "Offline Mode", "Priority Support"],
+        "cta": "Upgrade to Premium"
+      },
+      "pro": {
+        "name": "Premium",
+        "badge": "Popular",
+        "price": "$4.99",
+        "features": ["Unlimited AI Access", "4K Video Recitations", "Offline Mode", "Priority Support"],
+        "cta": "Upgrade to Premium"
+      }
+    }
+  },
+  "testimonial": {
+    "title": "What our users say",
+    "items": [
+      {
+        "name": "Benjamin Harper",
+        "role": "Marketing Manager",
+        "time": "3 days ago",
+        "content": "I love using this platform because the support is genuinely excellent.",
+        "image": "https://i.pravatar.cc/150?u=ben"
+      },
+      {
+        "name": "Maria Bigu",
+        "role": "Customer Support",
+        "time": "3 days ago",
+        "content": "I feel excited about using this platform. The experience is smooth from start to finish.",
+        "image": "https://i.pravatar.cc/150?u=maria"
+      },
+      {
+        "name": "Roberta Francis",
+        "role": "Financial Analyst",
+        "time": "5 days ago",
+        "content": "It has been a great experience so far. The support team is consistently helpful.",
+        "image": "https://i.pravatar.cc/150?u=roberta"
+      },
+      {
+        "name": "Ethan Mitchell",
+        "role": "Sales Executive",
+        "time": "2 days ago",
+        "content": "I was pleasantly surprised by the results. It feels like a strong start for me.",
+        "image": "https://i.pravatar.cc/150?u=ethan"
+      },
+      {
+        "name": "Ava Foster",
+        "role": "Software Engineer",
+        "time": "1 day ago",
+        "content": "Using this platform has been effortless. The experience feels secure and the support is top-notch.",
+        "image": "https://i.pravatar.cc/150?u=ava"
+      },
+      {
+        "name": "Lucas Bennett",
+        "role": "Tech Sprint",
+        "time": "1 day ago",
+        "content": "Registration is easy and the platform feels friendly and reliable.",
+        "image": "https://i.pravatar.cc/150?u=lucas"
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "company": "Quranity LLC",
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: February 25, 2026",
+    "navigationTitle": "Privacy Navigation",
+    "sections": [
+      { "id": "intro", "title": "INTRODUCTION" },
+      { "id": "collection", "title": "INFORMATION WE COLLECT" },
+      { "id": "usage", "title": "HOW WE USE INFORMATION" },
+      { "id": "ai-transparency", "title": "ARTIFICIAL INTELLIGENCE" },
+      { "id": "advertising", "title": "ADVERTISING & ANALYTICS" },
+      { "id": "data-transfers", "title": "INTERNATIONAL TRANSFERS" },
+      { "id": "retention", "title": "DATA RETENTION" },
+      { "id": "rights", "title": "YOUR RIGHTS" },
+      { "id": "meta-deletion", "title": "USER DATA DELETION" },
+      { "id": "security", "title": "SECURITY" },
+      { "id": "children", "title": "CHILDREN'S PRIVACY" },
+      { "id": "contact", "title": "CONTACT INFORMATION" }
+    ],
+    "content": {
+      "intro": {
+        "title": "1. Introduction",
+        "paragraphs": [
+          "This Privacy Policy describes how QURANITY LLC (\"Quranity,\" \"Company,\" \"we,\" \"our,\" or \"us\") collects, uses, processes, stores, and protects personal information when you use the Quranity mobile application, website, AI features, video modules (Shorts and Stories), Qur’an tools, prayer tools, and related services (collectively, the \"Services\").",
+          "By using the Services, you acknowledge that you have read and understood this Privacy Policy."
+        ]
+      },
+      "collection": {
+        "title": "2. Information We Collect",
+        "cards": [
+          {
+            "title": "Account & Tech",
+            "items": [
+              "Account: Name, email, username, subscription status.",
+              "Device: IP address, OS, app version, diagnostics."
+            ]
+          },
+          {
+            "title": "Usage & Location",
+            "items": [
+              "Usage: Interactions, Qur’an searches, bookmarks, Shorts activity.",
+              "Location: City-level or GPS for prayer times/Qibla."
+            ]
+          }
+        ],
+        "note": "Note: Use of our services may inherently reveal religious beliefs. This data is processed solely to provide the Services."
+      },
+      "usage": {
+        "title": "3. How We Use Information",
+        "items": [
+          "Provide and maintain Services.",
+          "Deliver prayer times and Qibla direction.",
+          "Manage platform subscriptions.",
+          "Improve platform functionality.",
+          "Communicate service updates.",
+          "Comply with legal obligations."
+        ]
+      },
+      "aiTransparency": {
+        "title": "4. Artificial Intelligence",
+        "description": "AI provides automated responses generated by artificial intelligence systems. These responses may not always be accurate, complete, or authoritative.",
+        "note": "AI outputs are for informational purposes only and do not constitute religious rulings (fatwa), legal advice, or medical advice."
+      },
+      "advertising": {
+        "title": "5. Advertising, Analytics & Meta SDK",
+        "description": "We use tools such as Meta SDK and Meta Conversions API (CAPI). Tracking technologies are activated only after user consent where required by law.",
+        "highlight": "Quranity does NOT sell Personal Information."
+      },
+      "dataTransfers": {
+        "title": "7. Data Transfers",
+        "description": "Information may be processed in the United States. We implement Standard Contractual Clauses (SCCs) where required."
+      },
+      "retention": {
+        "title": "8. Data Retention",
+        "description": "We retain data for as long as necessary to provide Services. Users may request account deletion at any time."
+      },
+      "rights": {
+        "title": "9. Your Rights",
+        "description": "You may have rights to access, correct, delete, or restrict processing of your personal information. California residents may exercise rights under the CCPA/CPRA."
+      },
+      "metaDeletion": {
+        "title": "10. User Data Deletion (Meta Requirement)",
+        "description": "To request deletion of personal data associated with Facebook/Meta Login:",
+        "steps": [
+          "Log into Quranity and select 'Delete Account'.",
+          "Email support@quranity.app with the subject 'Facebook Data Deletion Request'."
+        ],
+        "note": "Data will be deleted from active systems within 30 days."
+      },
+      "security": {
+        "title": "11. Security",
+        "description": "We use TLS encryption and restricted access controls. No internet transmission is 100% secure."
+      },
+      "children": {
+        "title": "12. Children's Privacy",
+        "description": "Services are not directed to children under 13 (or 16 in certain regions). We do not knowingly collect minor information."
+      },
+      "contact": {
+        "title": "14. Contact Information",
+        "company": "QURANITY LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "termsPolicy": {
+    "company": "Quranity LLC",
+    "title": "TERMS & CONDITIONS",
+    "effectiveDate": "Effective Date: February 25, 2026",
+    "navigationTitle": "Quick Navigation",
+    "sections": [
+      { "id": "intro", "title": "ACCEPTANCE OF TERMS" },
+      { "id": "about", "title": "DESCRIPTION OF SERVICES" },
+      { "id": "content", "title": "ACCOUNTS & SUBSCRIPTIONS" },
+      { "id": "muslim_ai", "title": "USER RESPONSIBILITIES" },
+      { "id": "user_generated", "title": "INTELLECTUAL PROPERTY" },
+      { "id": "features", "title": "DISCLAIMER OF WARRANTIES" },
+      { "id": "payments", "title": "LIMITATION OF LIABILITY" },
+      { "id": "indemnification", "title": "INDEMNIFICATION" },
+      { "id": "arbitration", "title": "ARBITRATION & DISPUTE RESOLUTION" },
+      { "id": "force-majeure", "title": "FORCE MAJEURE" },
+      { "id": "termination", "title": "TERMINATION" },
+      { "id": "contact", "title": "CONTACT" }
+    ],
+    "content": {
+      "intro": {
+        "title": "1. Acceptance of Terms",
+        "description": "By accessing or using the Quranity mobile application, website, AI systems, Shorts, Stories, Qur’an tools, and related services (the \"Services\"), you agree to be bound by these Terms & Conditions. If you do not agree, please do not use the Services."
+      },
+      "about": {
+        "title": "2. Description of Services",
+        "description": "Quranity provides Islamic educational content, media features, prayer tools, and AI-generated informational responses. AI outputs are for informational purposes only and do not constitute religious rulings (fatwa), legal advice, or medical advice."
+      },
+      "content": {
+        "title": "3. Accounts & Subscriptions",
+        "description": "Subscriptions are processed via Apple App Store or Google Play. Billing, refunds, and cancellations are governed by the respective platform's policies. You are responsible for maintaining the confidentiality of your account credentials."
+      },
+      "muslimAi": {
+        "title": "4. User Responsibilities",
+        "description": "You agree not to misuse the Services, interfere with platform functionality, or attempt unauthorized access. Any use of the AI to generate harmful or prohibited content is strictly forbidden."
+      },
+      "userGenerated": {
+        "title": "5. Intellectual Property",
+        "description": "All content, trademarks, branding, and technology within Quranity are owned by QURANITY LLC or its licensors. You may not reproduce or distribute any part of the service without explicit permission."
+      },
+      "features": {
+        "title": "6. Disclaimer of Warranties",
+        "description": "The Services are provided \"AS IS\" and \"AS AVAILABLE\" without warranties of any kind, express or implied, including but not limited to the accuracy of AI-generated content."
+      },
+      "payments": {
+        "title": "7. Limitation of Liability",
+        "description": "To the maximum extent permitted by law, Quranity's total aggregate liability arising out of or relating to the Services shall not exceed the total amount paid by you to Quranity in the twelve (12) months preceding the claim."
+      },
+      "indemnification": {
+        "title": "8. Indemnification",
+        "description": "You agree to indemnify and hold harmless QURANITY LLC from claims, damages, and expenses arising out of your misuse of the Services or violation of these Terms."
+      },
+      "arbitration": {
+        "title": "9. Arbitration & Dispute Resolution",
+        "description": "Any dispute arising out of or relating to these Terms shall be resolved through binding arbitration conducted on an individual basis. Class actions are not permitted. Governing Law: State of Wyoming, United States."
+      },
+      "forceMajeure": {
+        "title": "10. Force Majeure",
+        "description": "Quranity shall not be liable for delays or failures resulting from causes beyond reasonable control, including natural disasters, strikes, or internet service provider failures."
+      },
+      "termination": {
+        "title": "11. Termination",
+        "description": "We may suspend or terminate access to the Services immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users."
+      },
+      "contact": {
+        "title": "12. Contact",
+        "company": "QURANITY LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "facebookDeletionPolicy": {
+    "company": "Quranity LLC",
+    "title": "User Data Deletion",
+    "titleHighlight": "Instructions",
+    "lastUpdated": "Last Updated: February 25, 2026",
+    "navigationTitle": "Quick Guide",
+    "bottomFooter": "© 2026 Quranity LLC • All Rights Reserved",
+    "sections": [
+      { "id": "deletion-methods", "title": "DELETION METHODS" },
+      { "id": "meta-callback", "title": "META CALLBACK SUPPORT" },
+      { "id": "processing-time", "title": "PROCESSING & RETENTION" },
+      { "id": "privacy-commitment", "title": "PRIVACY COMMITMENT" },
+      { "id": "contact", "title": "CONTACT & SUPPORT" }
+    ],
+    "content": {
+      "deletionMethods": {
+        "title": "1. How to Request Deletion",
+        "inAppTitle": "In-App Method",
+        "inAppDescription": "Log into your Quranity account, navigate to Settings, and select",
+        "deleteAccountLabel": "\"Delete Account\".",
+        "emailTitle": "Direct Email",
+        "emailDescription": "Send a request to",
+        "emailDescriptionSuffix": "with the subject line",
+        "emailSubject": "\"Facebook Data Deletion Request\""
+      },
+      "metaCallback": {
+        "title": "2. Meta Callback Support",
+        "description": "\"If you initiate deletion directly through Facebook, Facebook may send us a data deletion callback notification.\"",
+        "badge": "Automated Processing Enabled"
+      },
+      "processingTime": {
+        "title": "3. Processing & Retention",
+        "item1": "Upon verification of your identity, your data will be deleted from active systems within 30 days.",
+        "item2": "Certain records may remain temporarily in secure backups for legal or security purposes."
+      },
+      "privacyCommitment": {
+        "title": "4. Privacy Commitment",
+        "description": "As an Islamic educational platform, Quranity treats your data as a trust (Amanah). We collect only what is necessary to provide spiritual services.",
+        "points": [
+          "No profiling or targeted ads",
+          "No data sales to third parties",
+          "Encrypted data transmission",
+          "Transparent handling protocols"
+        ]
+      },
+      "contact": {
+        "title": "5. Contact & Support",
+        "entityTitle": "Entity Headquarters",
+        "company": "QURANITY LLC",
+        "addressLine1": "30 N Gould St Ste R",
+        "addressLine2": "Sheridan, Wyoming 82801",
+        "complianceTitle": "Compliance Email",
+        "email": "support@quranity.app",
+        "footerLine": "Protecting your spiritual journey through data integrity."
+      }
+    }
+  },
+  "cookiesPolicy": {
+    "company": "Quranity LLC",
+    "title": "Cookie Policy",
+    "effectiveDate": "Effective Date: February 25, 2026",
+    "navigationTitle": "Policy Navigation",
+    "sections": [
+      { "id": "what-are-cookies", "title": "WHAT ARE COOKIES" },
+      { "id": "types-of-cookies", "title": "TYPES OF COOKIES" },
+      { "id": "meta-analytics", "title": "META & ANALYTICS TOOLS" },
+      { "id": "managing-cookies", "title": "MANAGING COOKIES" },
+      { "id": "contact", "title": "CONTACT" }
+    ],
+    "content": {
+      "whatAreCookies": {
+        "title": "1. What Are Cookies",
+        "description": "Cookies are small text files stored on your device when you visit a website."
+      },
+      "typesOfCookies": {
+        "title": "2. Types of Cookies We Use",
+        "items": [
+          { "title": "Essential Cookies:", "description": "Required for website functionality." },
+          { "title": "Analytics Cookies:", "description": "Help us understand usage patterns." },
+          { "title": "Marketing Cookies:", "description": "Used for advertising and Meta integrations, subject to your consent." }
+        ]
+      },
+      "metaAnalytics": {
+        "title": "3. Meta & Analytics Tools",
+        "description1": "We may use Meta Pixel, Meta Conversions API (CAPI), and similar technologies.",
+        "description2": "Where required by law, these tools are activated only after user consent."
+      },
+      "managingCookies": {
+        "title": "4. Managing Cookies",
+        "description": "You can manage cookie preferences through your browser settings or our website's consent banner."
+      },
+      "contact": {
+        "title": "5. Contact",
+        "company": "QURANITY LLC",
+        "description": "For questions regarding this policy, please contact:",
+        "email": "support@quranity.app"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "We're Here to Help",
+    "description": "Have a question, feedback, or need support? We'd love to hear from you. Quranity is built with care for the global Muslim community, and your input helps us improve.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Name",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "Email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Message",
+    "cta": "Leave us a Message"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "albanian": "Shqip",
+    "selectLanguage": "Select Language"
+  }
+}

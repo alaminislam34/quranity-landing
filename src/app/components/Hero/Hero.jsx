@@ -2,20 +2,21 @@
 
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 import InfiniteGrid from "./Lines";
 
 function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <div className="py-4 lg:pt-12 relative pb-12">
       <InfiniteGrid />
       <div className="py-6 md:py-8 relative">
         <h1 className="text-4xl md:text-5xl text-wrap xl:text-8xl font-extrabold font-lato mx-auto text-center max-w-7xl mb-6 leading-normal">
-          Ask. Learn. Reflect. Grow With Quranity
+          {t("title")}
         </h1>
         <p className="max-w-4xl mx-auto w-11/12 font-roboto text-center text-lg lg:text-2xl text-[#4A4A4A]">
-          Stay connected to Allah with accurate prayer times, daily Qur’an
-          verses, and trusted Islamic guidance — all in one beautifully designed
-          app.
+          {t("subtitle")}
         </p>
       </div>
       <div className="mt-10 lg:mt-12 mx-auto relative">
@@ -24,14 +25,14 @@ function HeroSection() {
             src={"/images/Gradients.png"}
             height={800}
             width={1227}
-            alt="App Image"
+            alt={t("appImageAlt")}
             className="mx-auto max-w-xs md:max-w-md lg:max-w-2xl z-10 relative rotate-180"
           />
           <Image
             src={"/images/Gradients.png"}
             height={800}
             width={1227}
-            alt="App Image"
+            alt={t("appImageAlt")}
             className="mx-auto max-w-xs md:max-w-md lg:max-w-2xl z-10 relative"
           />
         </div>
@@ -41,7 +42,7 @@ function HeroSection() {
             src={"/images/app.png"}
             height={800}
             width={1227}
-            alt="App Image"
+            alt={t("appImageAlt")}
             className="mx-auto max-w-6xl w-10/12 lg:w-11/12 object-contain z-10 relative"
           />
         </div>

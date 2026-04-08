@@ -1,11 +1,17 @@
+"use client";
+
 import React from "react";
 import { motion } from "motion/react";
-import { BookOpen, MapPin, MessageSquare } from "lucide-react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
 const SpiritualSection = () => {
+  const t = useTranslations("spiritual");
+  const locale = useLocale();
+
   const features = [
     {
+      key: "quran",
       icon: (
         <div>
           <Image
@@ -13,17 +19,16 @@ const SpiritualSection = () => {
             width={200}
             priority
             height={200}
-            alt="Quran image"
+            alt={t("features.quran.alt")}
             className="w-6 h-6 object-contain"
           />
         </div>
       ),
-      title: "Qur'an, Every Day",
-      description:
-        "Read the Qur'an with clarity and focus. Enjoy full Surah views, tajweed highlighting, translations, audio recitation, and daily verses for reflection.",
-      pointTo: "top-[20%]",
+      title: t("features.quran.title"),
+      description: t("features.quran.description"),
     },
     {
+      key: "prayer",
       icon: (
         <div>
           <Image
@@ -31,17 +36,16 @@ const SpiritualSection = () => {
             width={200}
             priority
             height={200}
-            alt="Quran image"
+            alt={t("features.prayer.alt")}
             className="w-6 h-6 object-contain"
           />
         </div>
       ),
-      title: "Accurate Prayer & Time Awareness",
-      description:
-        "Never miss a prayer with precise prayer times, next prayer countdowns, sunrise & sunset tracking, and Nafal prayer guidance — customized to your location.",
-      pointTo: "top-[55%]",
+      title: t("features.prayer.title"),
+      description: t("features.prayer.description"),
     },
     {
+      key: "ai",
       icon: (
         <div>
           <Image
@@ -49,21 +53,21 @@ const SpiritualSection = () => {
             width={200}
             priority
             height={200}
-            alt="Quran image"
+            alt={t("features.ai.alt")}
             className="w-6 h-6 object-contain"
           />
         </div>
       ),
-      title: "Muslim AI — Guidance You Can Trust",
-      description:
-        "Get instant answers to your spiritual questions with our integrated AI, trained to provide context-aware guidance from reliable sources.",
-      pointTo: "top-[85%]",
+      title: t("features.ai.title"),
+      description: t("features.ai.description"),
     },
   ];
 
   return (
     <section className="relative flex items-center justify-center px-6 py-20">
-      <div className="max-w-400 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div
+        className={`max-w-400 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${locale === "ar" ? "text-right" : "text-left"}`}
+      >
         <motion.div
           initial={{ opacity: 0, x: -50, rotateY: 20 }}
           whileInView={{ opacity: 1, x: 0, rotateY: -15 }}
@@ -74,7 +78,7 @@ const SpiritualSection = () => {
             src={"/images/app2.jpg"}
             height={2000}
             width={2000}
-            alt="App image"
+            alt={t("appAlt")}
             className="max-h-150 object-contain h-full w-full relative z-10"
           />
           <div className="absolute max-w-80 rounded-r-full aspect-square lg:max-w-180 mx-auto max-h-50 lg:max-h-100 top-1/2 -translate-y-1/2 blur-3xl left-1/2 -translate-x-1/2  bg-primary/20 h-full w-full"></div>
@@ -86,20 +90,21 @@ const SpiritualSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-[#F5F5F5] text-2xl md:text-4xl xl:text-[40px] font-semibold mb-12 xl:mb-16"
           >
-            Everything You Need to Stay <br />
-            <span className="text-gray-100">Spiritually Connected</span>
+            {t("title")}
           </motion.h2>
 
           <div className="space-y-10">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.key}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2 }}
                 className="group flex flex-col gap-4"
               >
-                <div className="shrink-0 flex flex-row items-center gap-2">
+                <div
+                  className={`flex items-center gap-4 ${locale === "ar" ? "flex-row-reverse" : ""}`}
+                >
                   {feature.icon}
                   <h4 className="text-xl font-semibold text-white group-hover:text-yellow-500 transition-colors">
                     {feature.title}

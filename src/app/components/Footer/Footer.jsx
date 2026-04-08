@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import { FaYoutube } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
+import { useLocale, useTranslations } from "next-intl";
 
 const icons = [
   {
@@ -24,38 +25,43 @@ const icons = [
 ];
 
 const Footer = () => {
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
+  const locale = useLocale();
 
   const footerSections = [
     {
-      title: "Home",
+      title: t("sections.home.title"),
       links: [
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms", href: "/terms" },
-        { name: "Contact Us", href: "/contact" },
+        { name: t("sections.home.links.privacy"), href: "/privacy" },
+        { name: t("sections.home.links.terms"), href: "/terms" },
+        { name: t("sections.home.links.contact"), href: "/contact" },
       ],
     },
     {
-      title: "Information",
+      title: t("sections.info.title"),
       links: [
-        { name: "FAQ", href: "#faq" },
-        { name: "Facebook Deletion Page", href: "facebook-terms" },
-        { name: "Cookie Policy", href: "/cookies" },
+        { name: t("sections.info.links.faq"), href: "#faq" },
+        {
+          name: t("sections.info.links.facebookDeletion"),
+          href: "facebook-terms",
+        },
+        { name: t("sections.info.links.cookies"), href: `/${locale}/cookies` },
       ],
     },
     {
-      title: "Social",
+      title: t("sections.social.title"),
       links: [
         {
-          name: "Facebook",
+          name: t("sections.social.links.facebook"),
           href: "https://www.facebook.com/share/18R73SgF3x/?mibextid=wwXIfr",
         },
         {
-          name: "Instagram",
+          name: t("sections.social.links.instagram"),
           href: "https://www.instagram.com/quranityapp?igsh=bzV0dnBsbWE4cmF4&utm_source=qr",
         },
         {
-          name: "Youtube",
+          name: t("sections.social.links.youtube"),
           href: "https://www.youtube.com/@quranityapp?si=JCL7xoUGtl3xJGF4",
         },
       ],
@@ -65,7 +71,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#141414] text-white py-12 md:py-16 xl:py-20">
       {/* Upper Section */}
-      <div className="max-w-400 mx-auto w-11/12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div
+        className={`max-w-400 mx-auto w-11/12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 ${locale === "ar" ? "text-right" : "text-left"}`}
+      >
+        <div className={`${locale === "ar" ? "" : "hidden"}`}></div>
         {footerSections.map((section, idx) => (
           <div key={idx}>
             <h3 className="text-xl font-bold mb-6">{section.title}</h3>
@@ -97,15 +106,15 @@ const Footer = () => {
             src="/logos/quranity.jpg"
             height={200}
             width={200}
-            alt="Logo"
+            alt={t("brandAlt")}
             className="rounded-xl max-w-15 shadow-lg shadow-black/50"
           />
-          <p className="text-white font-medium text-lg">Quranity</p>
+          <p className="text-white font-medium text-lg">{t("brand")}</p>
         </Link>
 
         {/* Copyright */}
         <p className="text-[#A3A3A3] text-base">
-          © {currentYear} Quranity LLC. All rights reserved.
+          {t("copyright", { year: currentYear })}
         </p>
 
         {/* Social Icons */}

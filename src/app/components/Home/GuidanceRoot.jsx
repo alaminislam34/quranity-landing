@@ -1,14 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const GuidanceRoot = () => {
+  const t = useTranslations("guidanceRoot");
+
   return (
     <div>
       <section className="max-w-400 mx-auto w-11/12 py-12 md:py-16 lg:py-20">
         <div>
           <h1 className="text-[#F5F5F5] text-2xl md:text-4xl xl:text-[40px] font-semibold text-center mb-12 xl:mb-16 max-w-3xl mx-auto">
-            Guidance Rooted in Faith. Powered by Intelligence.
+            {t("title")}
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-6 xl:gap-x-0 relative">
@@ -18,7 +21,7 @@ const GuidanceRoot = () => {
               src={"/images/background_animation.png"}
               height={5000}
               width={5000}
-              alt="Animation"
+              alt={t("backgroundAlt")}
               className="h-full w-full"
             />
           </div>
@@ -27,7 +30,7 @@ const GuidanceRoot = () => {
               src={"/images/iPhone16Pro.png"}
               height={5000}
               width={5000}
-              alt="Phone image"
+              alt={t("phoneAlt")}
               priority
               className="max-h-240 h-full w-full object-contain"
             />
@@ -37,7 +40,7 @@ const GuidanceRoot = () => {
               src={"/images/iPhone16Pro2.png"}
               height={5000}
               width={5000}
-              alt="Phone image"
+              alt={t("phoneAlt")}
               priority
               className="max-h-240 h-full w-full object-contain"
             />
@@ -53,7 +56,7 @@ const GuidanceRoot = () => {
               src={"/images/background_animation.png"}
               height={5000}
               width={5000}
-              alt="Animation"
+              alt={t("backgroundAlt")}
               className="h-full w-full"
             />
           </div>
@@ -62,7 +65,7 @@ const GuidanceRoot = () => {
               src={"/images/iPhone16Pro3.png"}
               height={5000}
               width={5000}
-              alt="Phone image"
+              alt={t("phoneAlt")}
               priority
               className="max-h-240 h-full w-full object-contain"
             />
@@ -72,7 +75,7 @@ const GuidanceRoot = () => {
               src={"/images/iPhone16Pro4.png"}
               height={5000}
               width={5000}
-              alt="Phone image"
+              alt={t("phoneAlt")}
               priority
               className="max-h-240 h-full w-full object-contain"
             />
