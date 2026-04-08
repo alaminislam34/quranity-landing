@@ -1,20 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import {
-  Menu,
-  X,
-  User,
-  BookOpen,
-  LogOut,
-  Mail,
-  ArrowUpRight,
-} from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { toast } from "react-toastify";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { localizeRoute } from "@/lib/i18n-utils";
 
@@ -26,7 +17,7 @@ export default function Navbar() {
   const dropdownRef = useRef(null);
 
   const links = [
-    { name: t("home"), href: localizeRoute("/", locale), segment: "" },
+    { name: t("home"), href: localizeRoute("/", locale), segment: locale },
     {
       name: t("privacy"),
       href: localizeRoute("/privacy", locale),
@@ -39,8 +30,8 @@ export default function Navbar() {
     },
     {
       name: t("facebookDeletion"),
-      href: localizeRoute("/facebook-terms", locale),
-      segment: "facebook-terms",
+      href: localizeRoute("/facebookTerms", locale),
+      segment: "facebookTerms",
     },
     {
       name: t("contact"),
@@ -54,7 +45,7 @@ export default function Navbar() {
   const [email, setEmail] = useState("");
 
   // Mocking auth - replace with your actual auth hook
-  const { user, loading } = { user: null, loading: false };
+  const { user } = { user: null, loading: false };
   const closeAll = () => {
     setMenuOpen(false);
     setShowDropdown(false);
@@ -83,7 +74,7 @@ export default function Navbar() {
               src="/logos/quranity.jpg"
               height={200}
               width={200}
-                alt={t("logoAlt")}
+              alt={t("logoAlt")}
               className="rounded-xl max-w-15 shadow-lg shadow-black/50"
             />
             <p className="text-white font-medium text-lg">{t("brand")}</p>
@@ -95,9 +86,9 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={`text-[15px] transition-colors duration-200 ${
-                    pathname === link.href || pathname.endsWith(link.segment)
-                      ? "text-[#c28e2e] font-medium"
-                      : "text-gray-300 hover:text-white"
+                    pathname.endsWith(link.segment)
+                      ? "text-primary"
+                      : "text-white"
                   }`}
                 >
                   {link.name}
@@ -120,7 +111,7 @@ export default function Navbar() {
                     width={34}
                     height={34}
                     className="rounded-full"
-                      alt={t("profileAlt")}
+                    alt={t("profileAlt")}
                   />
                 </button>
               </div>
@@ -163,7 +154,7 @@ export default function Navbar() {
                 key={link.segment}
                 href={link.href}
                 onClick={closeAll}
-                className={`text-lg ${pathname === link.href || pathname.endsWith(link.segment) ? "text-[#c28e2e]" : "text-gray-300"}`}
+                className={`text-lg ${pathname.endsWith(link.segment) ? "text-primary" : "text-gray-300"}`}
               >
                 {link.name}
               </Link>
@@ -181,7 +172,7 @@ export default function Navbar() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <button className="w-full bg-[#c28e2e] text-white py-3 rounded-lg font-bold">
+              <button className="w-full bg-primary text-white py-3 rounded-lg font-bold">
                 {t("getApp")}
               </button>
             </div>

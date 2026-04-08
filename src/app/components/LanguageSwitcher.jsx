@@ -49,7 +49,7 @@ export default function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-colors text-sm font-medium border border-white/40 cursor-pointer"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-label={t("selectLanguage")}
@@ -63,7 +63,7 @@ export default function LanguageSwitcher() {
 
       {isOpen && (
         <div
-          className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50"
+          className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50"
           role="listbox"
           aria-label={t("selectLanguage")}
         >
@@ -72,10 +72,10 @@ export default function LanguageSwitcher() {
               type="button"
               key={loc}
               onClick={() => handleLanguageChange(loc)}
-              className={`w-full text-left px-4 py-2 transition-colors cursor-pointer ${
+              className={`w-full text-left px-4 py-2 transition-colors ${
                 locale === loc
-                  ? "bg-primary-900 text-primary-300 font-semibold"
-                  : "hover:bg-gray-700"
+                  ? "bg-gray-950 text-primary-300 font-semibold"
+                  : "hover:bg-gray-900 cursor-pointer"
               } ${loc === "en" ? "rounded-t-lg" : ""} ${loc === "sq" ? "rounded-b-lg" : ""}`}
             >
               {languageNames[loc]}

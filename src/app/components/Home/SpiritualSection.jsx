@@ -106,7 +106,7 @@ const SpiritualSection = () => {
                   className={`flex items-center gap-4 ${locale === "ar" ? "flex-row-reverse" : ""}`}
                 >
                   {feature.icon}
-                  <h4 className="text-xl font-semibold text-white group-hover:text-yellow-500 transition-colors">
+                  <h4 className="text-xl font-semibold text-white group-hover:text-primary transition-colors">
                     {feature.title}
                   </h4>
                 </div>
