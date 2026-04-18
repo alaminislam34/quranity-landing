@@ -44,7 +44,6 @@ export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [email, setEmail] = useState("");
 
-  // Mocking auth - replace with your actual auth hook
   const { user } = { user: null, loading: false };
   const closeAll = () => {
     setMenuOpen(false);
