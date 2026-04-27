@@ -41,6 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
-AWS.text
+AWS.txt
 .dockerignore
 Quranity.pem
