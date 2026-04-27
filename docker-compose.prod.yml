@@ -1,13 +1,19 @@
-version: "3.9"
-
 services:
-  frontend:
-    image: fahad1000mir/quranity-landing:latest
-    container_name: quranity-landing
+  app:
+    image: alaminislam34/quranity:latest
+    container_name: quranity-prod
+    restart: unless-stopped
     ports:
       - "3000:3000"
-    # env_file:
-    #   - .env
-    restart: always
-    
-    
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOST: 0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

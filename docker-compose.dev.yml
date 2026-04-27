@@ -1,14 +1,23 @@
-version: "3.9"
-
 services:
-  frontend:
+  app:
+    image: alaminislam34/quranity:latest
     build:
       context: .
-      dockerfile: Dockerfile
-    image: fahad1000mir/quranity-landing:latest
-    container_name: quranity-landing
+      target: dev
+    container_name: quranity
+    restart: unless-stopped
+    command: sh -c "corepack pnpm install && corepack pnpm exec next dev --hostname 0.0.0.0"
     ports:
       - "3000:3000"
-    # env_file:
-    #   - .env
-    restart: always
+    env_file:
+      - .env.local
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      HOST: 0.0.0.0
+      CI: "true"
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
