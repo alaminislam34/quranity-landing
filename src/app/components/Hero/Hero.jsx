@@ -42,6 +42,7 @@ function HeroSection() {
             src={"/images/app.png"}
             height={800}
             width={1227}
+            loading="lazy"
             alt={t("appImageAlt")}
             className="mx-auto max-w-6xl w-10/12 lg:w-11/12 object-contain z-10 relative"
           />
